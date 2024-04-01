@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Vandev Websites",
+  title: "Portfolio | Evandro Machado",
   description: "Criação de sites personalizados para você!",
 };
 
