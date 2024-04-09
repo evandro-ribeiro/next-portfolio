@@ -5,12 +5,12 @@ import Link from "next/link"
 
 export default function Navbar() {
 
-    const borderBottom = "text-zinc-50 hover:bg-blue-gradient hover:duration-75 hover:ease-in p-2 rounded-full"
+    const borderBottom = "backdrop-blur-sm text-zinc-50 hover:bg-blue-gradient hover:duration-75 hover:ease-in p-2 rounded-full"
 
     return (
         <section>
             <motion.div 
-                className="flex justify-between md:mx-6 py-4 md:px-20 px-4 items-center text-sm md:text-base "
+                className="flex justify-between md:mx-6 py-4 md:px-20 px-4 items-center text-xs md:text-base"
                 initial={{y: -100, opacity: 0}}
                 animate={{y: 0, opacity: 1}}
                 transition={{type: "spring", stiffness: 40}}
