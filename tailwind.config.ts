@@ -13,7 +13,9 @@ const config = {
     backgroundImage: {
       "video-test": "url('/teste1.mp4')",
       "blue-gradient": "linear-gradient(to left, #8f8fff, #3d00de)",
+      "text-blue-gradient": "linear-gradient(to bottom, #8f8fff, #3d00de)",
       "dark-gradient": "linear-gradient(to bottom, #ffffff, #020051, #002610)",
+      "text-dark-gradient": "linear-gradient(to bottom, #ffffff, #002610)",
       "orange-gradient": "linear-gradient(to bottom, #ffffff, #F5DD61, #FBA834)",
     },
     fontFamily: {
