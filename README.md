@@ -2,9 +2,10 @@
 
 # Minha Landing Page Oficial
 
-Projeto criado para mostrar os principais projetos desenvolvidos de aplicações web.
+Projeto criado para mostrar alguns projetos desenvolvidos de aplicações web.
 
 ## Este projeto utilizou as seguintes ferramentas:
+
 - Next.js
 - Tailwind CSS
 - Shadcn/ui
@@ -12,4 +13,4 @@ Projeto criado para mostrar os principais projetos desenvolvidos de aplicações
 
 ### Link de acesso ao site
 
-https://next-portfolio-alpha-indol.vercel.app/
+https://portfolio-evandro-machado.vercel.app/
