@@ -62,7 +62,7 @@ export default function InitialBanner() {
             </p>
           </div>
           <Link
-            href={"https://wa.me/5544999561963"}
+            href={"https://t.me/evandrormf"}
             target="blank"
             className="border-2 text-blue-200 rounded-full text-sm md:text-base p-1 md:p-3 md:w-52 hover:scale-110 hover:shadow-lg hover:shadow-blue-500 hover:bg-sky-50 hover:font-bold duration-300"
           >
