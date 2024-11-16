@@ -14,6 +14,7 @@ export default function FrequentAskSection() {
       <Link
         href={"https://t.me/evandrormf"}
         target="blank"
+        rel="noopener noreferrer"
         className="flex items-center gap-3 font-semibold border-2 rounded-full py-2 px-6 hover:scale-110 duration-300 hover:shadow-orange-400 hover:shadow-md"
       >
         Tem outras perguntas? <FaArrowRight color="orange" />

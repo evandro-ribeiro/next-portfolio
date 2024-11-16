@@ -15,7 +15,11 @@ export default function ProjectsSection() {
 
       <div className="md:pb-20 md:mx-32 mx-10">
         <div className="flex gap-4 py-6 flex-col md:flex-row">
-          <Link href="https://meva-consultoria.vercel.app/" target="blank">
+          <Link
+            href="https://meva-consultoria.vercel.app/"
+            target="blank"
+            rel="noopener noreferrer"
+          >
             <Image
               className="rounded-lg duration-700 hover:scale-105 hover:duration-300 hover:ease-in hover:bg-orange-gradient hover:shadow-xl hover:shadow-orange-700"
               src="/project2.png"
@@ -57,7 +61,11 @@ export default function ProjectsSection() {
               <SiTailwindcss size={25} title="TailwindCSS" color="#38bdf8" />
             </div>
           </div>
-          <Link href="https://next-casaverde.vercel.app/" target="blank">
+          <Link
+            href="https://next-casaverde.vercel.app/"
+            target="blank"
+            rel="noopener noreferrer"
+          >
             <Image
               className="rounded-lg duration-700 hover:scale-105 hover:duration-300 hover:ease-in hover:bg-orange-gradient hover:shadow-xl hover:shadow-orange-700"
               src="/project1.png"
@@ -85,7 +93,11 @@ export default function ProjectsSection() {
         </div>
 
         <div className="flex gap-4 py-6 flex-col md:flex-row">
-          <Link href="https://alura-space-six.vercel.app/" target="blank">
+          <Link
+            href="https://alura-space-six.vercel.app/"
+            target="blank"
+            rel="noopener noreferrer"
+          >
             <Image
               className="rounded-lg duration-700 hover:scale-105 hover:duration-300 hover:ease-in hover:bg-orange-gradient hover:shadow-xl hover:shadow-orange-700"
               src="/project3.png"
@@ -129,6 +141,7 @@ export default function ProjectsSection() {
           <Link
             href="https://evandro-ribeiro.github.io/mochila-de-viagem/"
             target="blank"
+            rel="noopener noreferrer"
           >
             <Image
               className="rounded-lg duration-700 hover:scale-105 hover:duration-300 hover:ease-in hover:bg-orange-gradient hover:shadow-xl hover:shadow-orange-700"

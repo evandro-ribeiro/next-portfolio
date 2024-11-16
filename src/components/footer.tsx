@@ -12,6 +12,7 @@ export default function Footer() {
           className={linkStyle}
           href={"https://www.linkedin.com/in/evandro-machado-464485180/"}
           target="blank"
+          rel="noopener noreferrer"
         >
           <FaLinkedinIn className="" />
         </Link>
@@ -19,6 +20,7 @@ export default function Footer() {
           className={linkStyle}
           href={"https://github.com/evandro-ribeiro"}
           target="blank"
+          rel="noopener noreferrer"
         >
           <FiGithub size={18} className="" />
         </Link>
@@ -26,6 +28,7 @@ export default function Footer() {
           className={linkStyle}
           href={"https://t.me/evandrormf"}
           target="blank"
+          rel="noopener noreferrer"
         >
           <FaTelegramPlane size={18} className="" />
         </Link>

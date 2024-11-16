@@ -44,7 +44,11 @@ export default function Contact() {
           do seu espaço digital!
         </h3>
       </div>
-      <Link href={"https://t.me/evandrormf"} target="blank">
+      <Link
+        href={"https://t.me/evandrormf"}
+        target="blank"
+        rel="noopener noreferrer"
+      >
         <motion.button
           className="text-white border-4 rounded-full p-2 md:p-4"
           whileHover={{
