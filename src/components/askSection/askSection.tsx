@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export default function FrequentAskSection() {
   return (
-    <section className="flex flex-col items-center gap-6 md:gap-16 md:px-28 py-10 md:py-20">
+    <section className="flex flex-col items-center gap-6 md:gap-16 md:px-16 py-10 md:py-20 overflow-hidden">
       <h2 className="text-xl md:text-3xl">Dúvidas Frequentes</h2>
-      <div className="flex flex-wrap md:flex-nowrap w-full px-10 justify-between gap-10">
+      <div className="flex flex-wrap w-3/4 md:w-2/3 lg:w-full md:flex-nowrap px-14 justify-center gap-10">
         <AccordionComponent />
         <AccordionComponent2 />
       </div>
