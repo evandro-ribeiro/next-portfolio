@@ -21,7 +21,7 @@ export default function Contact() {
 
   return (
     <div
-      className="flex flex-col md:flex-row md:gap-6 justify-between py-24 md:px-72 items-center bg-dark-gradient h-96"
+      className="flex flex-col lg:flex-row gap-6 lg:gap-32 justify-center py-24 items-center bg-dark-gradient h-96"
       id="contact"
     >
       <div className="text-center flex flex-col gap-6 md:gap-14">

@@ -6,7 +6,7 @@ export default function Footer() {
   const linkStyle = "border-2 p-3 rounded-full bg-gray-200 hover:scale-125";
 
   return (
-    <div className="flex flex-col items-center pb-4 md:pb-0 md:flex-row justify-around bg-dark-blue">
+    <div className="flex flex-col items-center pb-4 lg:pb-0 lg:flex-row justify-around bg-dark-blue">
       <div className="flex mb-5 md:my-5 gap-6">
         <Link
           className={linkStyle}
