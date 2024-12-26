@@ -3,13 +3,11 @@ import FrequentAskSection from "@/components/askSection/askSection";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import InitialBanner from "@/components/initialBanner";
-import Navbar from "@/components/navbar";
 import ProjectsSection from "@/components/projectsSection";
 
 export default function Home() {
   return (
     <main className="font-montserrat">
-      <Navbar />
       <InitialBanner />
       <ProjectsSection />
       <AdvantagesSection />

@@ -40,7 +40,7 @@ export default function Contact() {
           </motion.span>
         </h2>
         <h3 className="text-white text-xs md:text-base">
-          Entre em contato e faça um orçamento <br />
+          Entre em contato e inicie o projeto <br />
           do seu espaço digital!
         </h3>
       </div>
@@ -58,7 +58,7 @@ export default function Contact() {
           }}
           transition={{ type: "spring", stiffness: 100 }}
         >
-          Peça já seu orçamento
+          Entre em contato
         </motion.button>
       </Link>
     </div>

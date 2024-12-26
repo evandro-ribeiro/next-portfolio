@@ -4,6 +4,7 @@ import { FaCss3Alt, FaHtml5, FaReact, FaWordpress } from "react-icons/fa";
 import { SiJavascript } from "react-icons/si";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Navbar from "./navbar";
 
 export default function InitialBanner() {
   const defaultAnimations = {
@@ -21,14 +22,15 @@ export default function InitialBanner() {
   const logoStyle = "md:size-16 size-9";
 
   return (
-    <section>
+    <section className="relative overflow-hidden w-full">
       <video
         src="/teste1.mp4"
         autoPlay
         loop
         muted
-        className="absolute top-0 -z-10"
+        className="absolute top-0 -z-10 object-cover h-full w-full"
       />
+      <Navbar />
       <div className="flex justify-center pt-10 pb-6 xs:py-14 xs:mb-1 md:pt-10 md:pb-6 backdrop-blur-sm">
         <motion.div
           className="flex md:flex-col text-center gap-2 md:gap-14 md:py-0 md:pt-16 justify-center items-center"
@@ -71,26 +73,26 @@ export default function InitialBanner() {
           </Link>
         </motion.div>
       </div>
-      <div className="bg-slate-950 sm:bg-transparent md:mt-14 flex flex-col md:gap-8 md:mb-16">
+      <div className="bg-slate-950 sm:bg-transparent md:mt-14 flex flex-col md:gap-8">
         <div className="bg-gray-300 w-full h-0.5" />
         <div className="flex flex-wrap md:gap-28 gap-4 py-2 justify-center">
-          <span className="text-xs md:text-base backdrop-blur-lg flex font-semibold gap-2 items-center p-1 md:p-4 rounded-full shadow-md shadow-sky-700 md:shadow-white md:text-gray-100 text-sky-700 duration-200 hover:text-sky-700 hover:shadow-sky-300 hover:scale-110">
+          <span className="text-xs md:text-base backdrop-blur-lg flex font-semibold gap-2 items-center p-1 md:p-4 rounded-full shadow-md shadow-sky-700 lg:shadow-white lg:text-gray-100 text-sky-700 duration-200 hover:text-sky-700 hover:shadow-sky-300 hover:scale-110">
             <FaReact className={logoStyle} />
             ReactJS
           </span>
-          <span className="text-xs md:text-base backdrop-blur-lg flex font-semibold gap-2 items-center p-1 md:p-4 rounded-full shadow-md shadow-amber-300  md:shadow-white md:text-gray-100 text-amber-300 duration-200 hover:text-amber-300 hover:shadow-amber-300 hover:scale-110">
+          <span className="text-xs md:text-base backdrop-blur-lg flex font-semibold gap-2 items-center p-1 md:p-4 rounded-full shadow-md shadow-amber-300  lg:shadow-white lg:text-gray-100 text-amber-300 duration-200 hover:text-amber-300 hover:shadow-amber-300 hover:scale-110">
             <SiJavascript className={logoStyle} />
             JavaScript
           </span>
-          <span className="text-xs md:text-base backdrop-blur-lg flex font-semibold gap-2 items-center p-1 md:p-4 rounded-full shadow-md shadow-orange-600  md:shadow-white md:text-gray-100 text-orange-600 duration-200 hover:text-orange-600 hover:shadow-orange-300 hover:scale-110">
+          <span className="text-xs md:text-base backdrop-blur-lg flex font-semibold gap-2 items-center p-1 md:p-4 rounded-full shadow-md shadow-orange-600  lg:shadow-white lg:text-gray-100 text-orange-600 duration-200 hover:text-orange-600 hover:shadow-orange-300 hover:scale-110">
             <FaHtml5 className={logoStyle} />
             HTML
           </span>
-          <span className="text-xs md:text-base backdrop-blur-lg flex font-semibold gap-2 items-center p-1 md:p-4 rounded-full shadow-md shadow-blue-600  md:shadow-white md:text-gray-100 text-blue-600 duration-200 hover:text-blue-600 hover:shadow-blue-300 hover:scale-110">
+          <span className="text-xs md:text-base backdrop-blur-lg flex font-semibold gap-2 items-center p-1 md:p-4 rounded-full shadow-md shadow-blue-600  lg:shadow-white lg:text-gray-100 text-blue-600 duration-200 hover:text-blue-600 hover:shadow-blue-300 hover:scale-110">
             <FaCss3Alt className={logoStyle} />
             CSS
           </span>
-          <span className="text-xs md:text-base backdrop-blur-lg flex font-semibold gap-2 items-center p-1 md:p-4 rounded-full shadow-md shadow-cyan-600  md:shadow-white md:text-gray-100 text-cyan-600 duration-200 hover:text-cyan-600 hover:shadow-cyan-300 hover:scale-110">
+          <span className="text-xs md:text-base backdrop-blur-lg flex font-semibold gap-2 items-center p-1 md:p-4 rounded-full shadow-md shadow-cyan-600  lg:shadow-white lg:text-gray-100 text-cyan-600 duration-200 hover:text-cyan-600 hover:shadow-cyan-300 hover:scale-110">
             <FaWordpress className={logoStyle} />
             WordPress
           </span>
