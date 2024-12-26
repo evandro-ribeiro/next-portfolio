@@ -1,15 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BsFiletypeScss } from "react-icons/bs";
-import { FaCss3Alt, FaHtml5, FaReact } from "react-icons/fa";
-import { SiJavascript, SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import { FaCss3Alt, FaDocker, FaHtml5, FaNode, FaReact } from "react-icons/fa";
+import { GrMysql } from "react-icons/gr";
+import {
+  SiGooglemaps,
+  SiJavascript,
+  SiNextdotjs,
+  SiTailwindcss,
+} from "react-icons/si";
 
 export default function ProjectsSection() {
   return (
     <section id="portfolio">
       <div className="flex flex-col pt-10 mb-10 gap-12 items-center text-center">
         <h2 className="text-xl md:text-4xl text-cyan-900 md:w-1/4">
-          Veja alguns dos <b>nossos sites</b>
+          Veja algumas das <b>nossas aplicações</b>
         </h2>
       </div>
 
@@ -164,6 +170,40 @@ export default function ProjectsSection() {
               <FaHtml5 size={25} title="HTML" color="red" />
               <FaCss3Alt size={25} title="CSS" color="darkblue" />
               <SiJavascript size={25} title="CSS" color="#f0d81e" />
+            </div>
+          </div>
+        </div>
+
+        <div className="flex gap-4 py-6 flex-col md:flex-row">
+          <Link
+            href="https://github.com/evandro-ribeiro/node-next-amazing-trip"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className="rounded-lg duration-700 hover:scale-105 hover:duration-300 hover:ease-in hover:bg-orange-gradient hover:shadow-xl hover:shadow-orange-700"
+              src="/project5.png"
+              alt="Projeto do Portfolio"
+              width={600}
+              height={600}
+            />
+          </Link>
+          <div className="md:w-2/3 rounded-3xl p-6 gap-8 flex flex-col justify-center">
+            <h3 className="text-2xl font-bold bg-text-blue-gradient bg-clip-text text-transparent">
+              Amazing Trips
+            </h3>
+            <p className="text-sm md:text-base">
+              Aplicação FullStack desenvolvida para simular um serviço de
+              viagens como Taxi e Uber, funcionando integrada com a API do
+              Google Maps.
+            </p>
+            <div className="flex items-center gap-2">
+              <span>Desenvolvido com:</span>
+              <SiNextdotjs size={25} title="React" />
+              <FaNode size={25} title="Node.js" />
+              <SiGooglemaps size={25} title="Google Maps" color="#dc4e42" />
+              <FaDocker size={25} title="Docker" color="#0894e3" />
+              <GrMysql size={25} title="MySQL" color="#076591" />
             </div>
           </div>
         </div>
