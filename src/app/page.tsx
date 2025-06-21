@@ -3,7 +3,7 @@ import FrequentAskSection from "@/components/askSection/askSection";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import InitialBanner from "@/components/initialBanner";
-import ProjectsSection from "@/components/projectsSection";
+import ProjectsSection from "@/components/projectSection/projectsSection";
 
 export default function Home() {
   return (

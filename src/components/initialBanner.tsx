@@ -1,10 +1,25 @@
 "use client";
 
-import { FaCss3Alt, FaHtml5, FaReact, FaWordpress } from "react-icons/fa";
-import { SiJavascript } from "react-icons/si";
+import {
+  FaCss3Alt,
+  FaHtml5,
+  FaReact,
+  FaWordpress,
+  FaNode,
+  FaDocker,
+} from "react-icons/fa";
+import {
+  SiJavascript,
+  SiJest,
+  SiNextdotjs,
+  SiPostgresql,
+  SiTailwindcss,
+} from "react-icons/si";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Navbar from "./navbar";
+import Stack from "./stacks";
+import { GrMysql } from "react-icons/gr";
 
 export default function InitialBanner() {
   const defaultAnimations = {
@@ -19,7 +34,6 @@ export default function InitialBanner() {
   };
 
   const title = " seu Site Profissional";
-  const logoStyle = "md:size-16 size-9";
 
   return (
     <section className="relative overflow-hidden w-full">
@@ -31,7 +45,7 @@ export default function InitialBanner() {
         className="absolute top-0 -z-10 object-cover h-full w-full"
       />
       <Navbar />
-      <div className="flex justify-center pt-10 pb-6 xs:py-14 xs:mb-1 md:pt-10 md:pb-6 backdrop-blur-sm">
+      <div className="flex flex-col justify-center pt-10 pb-6 xs:py-14 xs:mb-1 md:pt-10 md:pb-6 backdrop-blur-sm">
         <motion.div
           className="flex md:flex-col text-center gap-2 md:gap-14 md:py-0 md:pt-16 justify-center items-center"
           initial={{ opacity: 0, scale: 0.5 }}
@@ -72,32 +86,80 @@ export default function InitialBanner() {
             Entre em contato
           </Link>
         </motion.div>
-      </div>
-      <div className="bg-slate-950 sm:bg-transparent md:mt-14 flex flex-col md:gap-8">
-        <div className="bg-gray-300 w-full h-0.5" />
-        <div className="flex flex-wrap md:gap-28 gap-4 py-2 justify-center">
-          <span className="text-xs md:text-base backdrop-blur-lg flex font-semibold gap-2 items-center p-1 md:p-4 rounded-full shadow-md shadow-sky-700 lg:shadow-white lg:text-gray-100 text-sky-700 duration-200 hover:text-sky-700 hover:shadow-sky-300 hover:scale-110">
-            <FaReact className={logoStyle} />
-            ReactJS
-          </span>
-          <span className="text-xs md:text-base backdrop-blur-lg flex font-semibold gap-2 items-center p-1 md:p-4 rounded-full shadow-md shadow-amber-300  lg:shadow-white lg:text-gray-100 text-amber-300 duration-200 hover:text-amber-300 hover:shadow-amber-300 hover:scale-110">
-            <SiJavascript className={logoStyle} />
-            JavaScript
-          </span>
-          <span className="text-xs md:text-base backdrop-blur-lg flex font-semibold gap-2 items-center p-1 md:p-4 rounded-full shadow-md shadow-orange-600  lg:shadow-white lg:text-gray-100 text-orange-600 duration-200 hover:text-orange-600 hover:shadow-orange-300 hover:scale-110">
-            <FaHtml5 className={logoStyle} />
-            HTML
-          </span>
-          <span className="text-xs md:text-base backdrop-blur-lg flex font-semibold gap-2 items-center p-1 md:p-4 rounded-full shadow-md shadow-blue-600  lg:shadow-white lg:text-gray-100 text-blue-600 duration-200 hover:text-blue-600 hover:shadow-blue-300 hover:scale-110">
-            <FaCss3Alt className={logoStyle} />
-            CSS
-          </span>
-          <span className="text-xs md:text-base backdrop-blur-lg flex font-semibold gap-2 items-center p-1 md:p-4 rounded-full shadow-md shadow-cyan-600  lg:shadow-white lg:text-gray-100 text-cyan-600 duration-200 hover:text-cyan-600 hover:shadow-cyan-300 hover:scale-110">
-            <FaWordpress className={logoStyle} />
-            WordPress
-          </span>
-        </div>
-        <div className="bg-gray-300 w-full h-0.5" />
+
+        <ul className="flex justify-center flex-wrap gap-4 md:gap-8 mt-14">
+          <Stack
+            Icon={FaNode}
+            title="Node.js"
+            colorItem="shadow-green-400 text-green-400 hover:text-green-400 hover:shadow-green-400"
+          />
+
+          <Stack
+            Icon={SiJavascript}
+            title="JavaScript"
+            colorItem="shadow-amber-300 text-amber-300 hover:text-amber-300 hover:shadow-amber-300"
+          />
+
+          <Stack
+            Icon={FaHtml5}
+            title="HTML"
+            colorItem="shadow-orange-300 text-orange-600 hover:text-orange-600 hover:shadow-orange-300"
+          />
+
+          <Stack
+            Icon={FaCss3Alt}
+            title="CSS"
+            colorItem="shadow-blue-300 text-blue-600 hover:text-blue-600 hover:shadow-blue-300"
+          />
+
+          <Stack
+            Icon={FaWordpress}
+            title="WordPress"
+            colorItem="shadow-cyan-300 text-cyan-600 hover:text-cyan-600 hover:shadow-cyan-300"
+          />
+
+          <Stack
+            Icon={FaReact}
+            title="React.js"
+            colorItem="shadow-sky-300 text-sky-700 hover:text-sky-700 hover:shadow-sky-300"
+          />
+
+          <Stack
+            Icon={SiNextdotjs}
+            title="Next.js"
+            colorItem="shadow-gray-300 text-gray-600 hover:text-gray-600 hover:shadow-gray-300"
+          />
+
+          <Stack
+            Icon={SiTailwindcss}
+            title="Tailwind"
+            colorItem="shadow-blue-100 text-blue-300 hover:text-blue-300 hover:shadow-blue-100"
+          />
+
+          <Stack
+            Icon={FaDocker}
+            title="Docker"
+            colorItem="shadow-blue-100 text-blue-400 hover:text-blue-400 hover:shadow-blue-100"
+          />
+
+          <Stack
+            Icon={GrMysql}
+            title="MySQL"
+            colorItem="shadow-sky-300 text-sky-700 hover:text-sky-700 hover:shadow-sky-300"
+          />
+
+          <Stack
+            Icon={SiPostgresql}
+            title="PostgreSQL"
+            colorItem="shadow-cyan-200 text-cyan-300 hover:text-cyan-300 hover:shadow-cyan-200"
+          />
+
+          <Stack
+            Icon={SiJest}
+            title="Jest.js"
+            colorItem="shadow-orange-300 text-orange-700 hover:text-orange-700 hover:shadow-orange-300"
+          />
+        </ul>
       </div>
     </section>
   );
