@@ -7,7 +7,10 @@ import { motion } from "framer-motion";
 
 export default function AdvantagesSection() {
   return (
-    <section className="bg-cyan-50 h-fit flex items-center flex-col py-10 md:gap-2">
+    <section
+      className="bg-cyan-50 h-fit flex items-center flex-col py-10 md:gap-2"
+      id="advantages"
+    >
       <motion.h2
         className="text-2xl md:text-3xl font-bold"
         initial={{ opacity: 0, y: -100 }}

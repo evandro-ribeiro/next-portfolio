@@ -28,9 +28,9 @@ export default function Contact() {
         <h2 className="text-white text-2xl md:text-3xl font-bold">
           Deseja criar o
           <motion.span
-            transition={{ staggerChildren: 0.1, ease: "easeInOut" }}
             initial="initialColor"
             animate="transitionColor"
+            transition={{ staggerChildren: 0.1, ease: "easeInOut" }}
           >
             {textForTransition.split("").map((char, index) => (
               <motion.span variants={spanVariants} key={index}>

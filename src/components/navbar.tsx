@@ -10,14 +10,11 @@ export default function Navbar() {
   return (
     <section>
       <motion.div
-        className="flex justify-between md:mx-6 py-4 md:px-20 px-4 items-center text-xs md:text-base"
+        className="flex justify-center md:mx-6 py-4 md:px-20 px-4 items-center text-xs md:text-base"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 40 }}
       >
-        <div className="text-zinc-400 backdrop-blur-md rounded-lg w-20 md:w-fit md:p-1 text-center">
-          Evandro Machado
-        </div>
         <div className="text-gray-500 flex md:gap-14 md:pr-20">
           <Link className={borderBottom} href={"/"}>
             Home
@@ -25,10 +22,16 @@ export default function Navbar() {
           <Link className={borderBottom} href={"#portfolio"}>
             Portfolio
           </Link>
+          <Link className={borderBottom} href={"#advantages"}>
+            Vantagens
+          </Link>
+          <Link className={borderBottom} href={"#faq"}>
+            Dúvidas
+          </Link>
         </div>
         <Link
           href={"#contact"}
-          className="bg-blue-gradient rounded-md p-2 text-white hover:scale-110 hover:font-semibold"
+          className="bg-dark-blue-gradient rounded-md p-2 text-white hover:scale-110 hover:font-semibold"
         >
           Contato
         </Link>

@@ -1,32 +1,34 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     backgroundImage: {
       "video-test": "url('/teste1.mp4')",
       "blue-gradient": "linear-gradient(to left, #8f8fff, #3d00de)",
-      "text-blue-gradient": "linear-gradient(to bottom, #8f8fff, #3d00de)",
+      "dark-blue-gradient": "linear-gradient(to left, #8f8f55, #3d00cc)",
       "dark-gradient": "linear-gradient(to bottom, #ffffff, #020051, #002610)",
+      "orange-gradient":
+        "linear-gradient(to bottom, #ffffff, #F5DD61, #FBA834)",
+      "text-blue-gradient": "linear-gradient(to bottom, #8f8fff, #3d00de)",
       "text-dark-gradient": "linear-gradient(to bottom, #ffffff, #002610)",
-      "orange-gradient": "linear-gradient(to bottom, #ffffff, #F5DD61, #FBA834)",
     },
     fontFamily: {
-      "montserrat": ["Montserrat", "sans-serif"]
+      montserrat: ["Montserrat", "sans-serif"],
     },
     screens: {
-      "xs": "425px",
-      "sm": "640px",
-      "md": "768px",
-      "lg": "1024px",
-      "xl": "1280px",
+      xs: "425px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
     },
     container: {
       center: true,
@@ -94,6 +96,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

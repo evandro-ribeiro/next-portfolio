@@ -30,10 +30,14 @@ export default function InitialBanner() {
     visible: {
       opacity: 1,
       y: 0,
+      transition: {
+        repeat: Infinity,
+        duration: 10,
+      },
     },
   };
 
-  const title = " seu Site Profissional";
+  const title = "Desenvolvedor Full Stack";
 
   return (
     <section className="relative overflow-hidden w-full">
@@ -47,21 +51,20 @@ export default function InitialBanner() {
       <Navbar />
       <div className="flex flex-col justify-center pt-10 pb-6 xs:py-14 xs:mb-1 md:pt-10 md:pb-6 backdrop-blur-sm">
         <motion.div
-          className="flex md:flex-col text-center gap-2 md:gap-14 md:py-0 md:pt-16 justify-center items-center"
+          className="flex flex-col text-center gap-2 md:gap-14 md:py-0 md:pt-16 justify-center items-center"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            ease: "easeIn",
+            ease: "easeInOut",
           }}
         >
-          <div className="w-1/2">
-            <motion.h1
-              className="md:text-5xl text-[#F0EDCF] pb-2 md:pb-10"
+          <div className="md:w-1/2">
+            <motion.p
+              className="text-lg md:text-5xl text-[#F0EDCF] pb-2"
               initial="hidden"
               animate="visible"
               transition={{ staggerChildren: 0.1 }}
             >
-              Crie sua presença online com
               {title.split("").map((char, index) => (
                 <motion.span
                   key={index}
@@ -71,12 +74,19 @@ export default function InitialBanner() {
                   {char}
                 </motion.span>
               ))}
-            </motion.h1>
-            <p className="text-zinc-50 text-xs md:text-base hidden md:block">
-              Deixe sua marca na web e crie seu próprio site personalizado para
-              mostrar seu produto ou serviço.
+            </motion.p>
+
+            <h1 className="text-3xl font-bold bg-text-dark-gradient text-transparent bg-clip-text pb-4  lg:text-5xl">
+              Evandro Machado
+            </h1>
+
+            <p className="text-zinc-50 md:pt-4 pb-4 md:pb-0 text-xs md:text-base md:block">
+              Desenvolvimento de aplicações web com responsividade, dinamismo e
+              interatividade. Sempre buscando as melhores práticas, evoluindo os
+              projetos em cada detalhe!
             </p>
           </div>
+
           <Link
             href={"https://t.me/evandrormf"}
             target="blank"
