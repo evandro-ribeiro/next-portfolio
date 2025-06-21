@@ -100,13 +100,13 @@ export default function ProjectsSection() {
 
         <div className="flex gap-4 py-6 flex-col md:flex-row">
           <Link
-            href="https://alura-space-six.vercel.app/"
+            href="https://github.com/evandro-ribeiro/node-next-amazing-trip"
             target="blank"
             rel="noopener noreferrer"
           >
             <Image
               className="rounded-lg duration-700 hover:scale-105 hover:duration-300 hover:ease-in hover:bg-orange-gradient hover:shadow-xl hover:shadow-orange-700"
-              src="/project3.png"
+              src="/project5.png"
               alt="Projeto do Portfolio"
               width={600}
               height={600}
@@ -114,16 +114,20 @@ export default function ProjectsSection() {
           </Link>
           <div className="md:w-2/3 rounded-3xl p-6 gap-8 flex flex-col justify-center">
             <h3 className="text-2xl font-bold bg-text-blue-gradient bg-clip-text text-transparent">
-              Alura Space
+              Amazing Trips
             </h3>
             <p className="text-sm md:text-base">
-              Site de imagens do universo desenvolvido para o teste técnico do
-              cargo Desenvolvedor Front-End.
+              Aplicação FullStack desenvolvida para simular um serviço de
+              viagens como Taxi e Uber, funcionando integrada com a API do
+              Google Maps.
             </p>
             <div className="flex items-center gap-2">
               <span>Desenvolvido com:</span>
-              <FaReact size={25} title="React" color="#087ea4" />
-              <BsFiletypeScss size={25} title="SCSS" />
+              <SiNextdotjs size={25} title="React" />
+              <FaNode size={25} title="Node.js" />
+              <SiGooglemaps size={25} title="Google Maps" color="#dc4e42" />
+              <FaDocker size={25} title="Docker" color="#0894e3" />
+              <GrMysql size={25} title="MySQL" color="#076591" />
             </div>
           </div>
         </div>
@@ -176,13 +180,13 @@ export default function ProjectsSection() {
 
         <div className="flex gap-4 py-6 flex-col md:flex-row">
           <Link
-            href="https://github.com/evandro-ribeiro/node-next-amazing-trip"
+            href="https://alura-space-six.vercel.app/"
             target="blank"
             rel="noopener noreferrer"
           >
             <Image
               className="rounded-lg duration-700 hover:scale-105 hover:duration-300 hover:ease-in hover:bg-orange-gradient hover:shadow-xl hover:shadow-orange-700"
-              src="/project5.png"
+              src="/project3.png"
               alt="Projeto do Portfolio"
               width={600}
               height={600}
@@ -190,20 +194,16 @@ export default function ProjectsSection() {
           </Link>
           <div className="md:w-2/3 rounded-3xl p-6 gap-8 flex flex-col justify-center">
             <h3 className="text-2xl font-bold bg-text-blue-gradient bg-clip-text text-transparent">
-              Amazing Trips
+              Alura Space
             </h3>
             <p className="text-sm md:text-base">
-              Aplicação FullStack desenvolvida para simular um serviço de
-              viagens como Taxi e Uber, funcionando integrada com a API do
-              Google Maps.
+              Site de imagens do universo desenvolvido para o teste técnico do
+              cargo Desenvolvedor Front-End.
             </p>
             <div className="flex items-center gap-2">
               <span>Desenvolvido com:</span>
-              <SiNextdotjs size={25} title="React" />
-              <FaNode size={25} title="Node.js" />
-              <SiGooglemaps size={25} title="Google Maps" color="#dc4e42" />
-              <FaDocker size={25} title="Docker" color="#0894e3" />
-              <GrMysql size={25} title="MySQL" color="#076591" />
+              <FaReact size={25} title="React" color="#087ea4" />
+              <BsFiletypeScss size={25} title="SCSS" />
             </div>
           </div>
         </div>

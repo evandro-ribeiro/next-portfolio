@@ -34,7 +34,7 @@ export default function Footer() {
         </Link>
       </div>
       <p className="flex gap-1 items-center text-xs md:text-base text-gray-200">
-        Todos os direitos reservados. <FaRegCopyright size={14} /> 2024
+        Todos os direitos reservados. <FaRegCopyright size={14} /> 2025
       </p>
     </div>
   );
