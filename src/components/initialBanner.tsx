@@ -42,7 +42,7 @@ export default function InitialBanner() {
   return (
     <section className="relative overflow-hidden w-full">
       <video
-        src="/teste1.mp4"
+        src="/bg-video.mp4"
         autoPlay
         loop
         muted
@@ -80,7 +80,7 @@ export default function InitialBanner() {
               Evandro Machado
             </h1>
 
-            <p className="text-zinc-50 md:pt-4 pb-4 md:pb-0 text-xs md:text-base md:block">
+            <p className="text-zinc-50 mx-6 md:mx-0 md:pt-4 pb-4 md:pb-0 text-xs md:text-base md:block">
               Desenvolvimento de aplicações web com responsividade, dinamismo e
               interatividade. Sempre buscando as melhores práticas, evoluindo os
               projetos em cada detalhe!
@@ -88,7 +88,7 @@ export default function InitialBanner() {
           </div>
 
           <Link
-            href={"https://t.me/evandrormf"}
+            href={"https://wa.me/5544998132956"}
             target="blank"
             rel="noopener noreferrer"
             className="border-2 text-blue-200 rounded-full text-sm md:text-base p-1 md:p-3 md:w-52 hover:scale-110 hover:shadow-lg hover:shadow-blue-500 hover:bg-sky-50 hover:font-bold duration-300"
