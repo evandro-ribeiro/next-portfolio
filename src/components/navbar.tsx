@@ -31,7 +31,7 @@ export default function Navbar() {
         </div>
         <Link
           href={"#contact"}
-          className="bg-dark-blue-gradient rounded-md p-2 text-white hover:scale-110 hover:font-semibold"
+          className="bg-dark-blue-gradient rounded-md p-2 text-white hover:scale-110 hover:font-semibold ml-2"
         >
           Contato
         </Link>

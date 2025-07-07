@@ -1,7 +1,6 @@
 import { BsFiletypeScss } from "react-icons/bs";
-import { FaDocker, FaNode, FaReact } from "react-icons/fa";
-import { GrMysql } from "react-icons/gr";
-import { SiGooglemaps, SiNextdotjs, SiTailwindcss } from "react-icons/si";
+import { FaCss3Alt, FaHtml5, FaReact } from "react-icons/fa";
+import { SiJavascript, SiNextdotjs, SiTailwindcss } from "react-icons/si";
 import ProjectLeftSide from "./projectLeftSide";
 import ProjectRightSide from "./projectRightSide";
 
@@ -17,7 +16,7 @@ export default function ProjectsSection() {
       <div className="md:pb-20 md:mx-32 mx-10">
         <ProjectLeftSide
           link={"https://meva-consultoria.vercel.app/"}
-          imgPath={"/project2.png"}
+          imgPath={"/project1.png"}
           title={"Meva Consultoria"}
           description={
             "Site de consultoria cervejeira, projetado para demonstrar os serviços prestados pela marca e divulgar suas informações."
@@ -27,7 +26,7 @@ export default function ProjectsSection() {
 
         <ProjectRightSide
           link={"https://next-casaverde.vercel.app/"}
-          imgPath={"/project1.png"}
+          imgPath={"/project2.png"}
           title={"CasaVerde"}
           description={
             "Site de decorações para a casa, principalmente focado na venda de plantas. Projetado e desenvolvido como SPA para demonstrar o fluxo de páginas de produtos, página de venda e página de finalização de pedido."
@@ -36,23 +35,23 @@ export default function ProjectsSection() {
         />
 
         <ProjectLeftSide
-          link={"https://github.com/evandro-ribeiro/node-next-amazing-trip"}
-          imgPath={"/project5.png"}
-          title={"Amazing Trips"}
+          link={"https://evandro-ribeiro.github.io/js-monks-challenge/"}
+          imgPath={"/project3.png"}
+          title={"Monks Web"}
           description={
-            "Aplicação FullStack desenvolvida para simular um serviço de viagens como Taxi e Uber, funcionando integrada com a API do Google Maps."
+            "Landing page desenvolvida com foco em utilização de menor quantidade de bibliotecas para melhorar performance e simplicidade do projeto"
           }
-          icons={[SiNextdotjs, FaNode, SiGooglemaps, FaDocker, GrMysql]}
+          icons={[FaHtml5, FaCss3Alt, SiJavascript]}
         />
 
         <ProjectRightSide
-          link={"https://alura-space-six.vercel.app/"}
-          imgPath={"/project3.png"}
-          title={"Alura Space"}
+          link={"https://petshop-compass.vercel.app/"}
+          imgPath={"/project4.png"}
+          title={"PetShop Paws n' Play"}
           description={
-            "Site de imagens do universo desenvolvido para o teste técnico do cargo Desenvolvedor Front-End."
+            "Projeto minimalista desenvolvido com foco apenas em dois tamanhos de tela específicos (1440px e 390px), conforme critérios de aceite."
           }
-          icons={[FaReact, BsFiletypeScss]}
+          icons={[FaHtml5, FaCss3Alt, SiJavascript]}
         />
       </div>
     </section>
