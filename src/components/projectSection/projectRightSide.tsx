@@ -17,7 +17,7 @@ export default function ProjectRightSide({
 }) {
   return (
     <section className="flex gap-4 py-6 flex-col md:flex-row">
-      <div className="hidden md:flex md:w-2/3 rounded-3xl p-6 gap-8 flex-col justify-center">
+      <article className="hidden md:flex md:w-2/3 rounded-3xl px-6 gap-8 flex-col justify-center">
         <h3 className="text-2xl font-bold bg-text-dark-gradient bg-clip-text text-transparent">
           {title}
         </h3>
@@ -28,7 +28,7 @@ export default function ProjectRightSide({
             <Icon key={index} size={25} />
           ))}
         </div>
-      </div>
+      </article>
       <Link href={link} target="blank" rel="noopener noreferrer">
         <Image
           className="rounded-lg duration-700 hover:scale-105 hover:duration-300 hover:ease-in hover:bg-orange-gradient hover:shadow-xl hover:shadow-orange-700"

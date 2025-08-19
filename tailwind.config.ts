@@ -11,13 +11,13 @@ const config = {
   prefix: "",
   theme: {
     backgroundImage: {
-      "video-test": "url('/teste1.mp4')",
       "blue-gradient": "linear-gradient(to left, #8f8fff, #3d00de)",
       "dark-blue-gradient": "linear-gradient(to left, #8f8f55, #3d00cc)",
       "dark-gradient": "linear-gradient(to bottom, #ffffff, #020051, #002610)",
       "orange-gradient":
         "linear-gradient(to bottom, #ffffff, #F5DD61, #FBA834)",
-      "text-blue-gradient": "linear-gradient(to bottom, #8f8fff, #3d00de)",
+      "text-blue-gradient":
+        "linear-gradient(to bottom, #ffffff, #8f8fff, #3d00de)",
       "text-dark-gradient": "linear-gradient(to bottom, #ffffff, #002610)",
     },
     fontFamily: {

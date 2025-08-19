@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="flex mb-5 md:my-5 gap-6">
         <Link
           className={linkStyle}
-          href={"https://www.linkedin.com/in/evandro-machado-464485180/"}
+          href={"https://www.linkedin.com/in/evandro-rm-filho/"}
           target="blank"
           rel="noopener noreferrer"
         >
@@ -34,7 +34,8 @@ export default function Footer() {
         </Link>
       </div>
       <p className="flex gap-1 items-center text-xs md:text-base text-gray-200">
-        Todos os direitos reservados. <FaRegCopyright size={14} /> 2025
+        Desenvolvido por <b>Evandro Machado</b>
+        <FaRegCopyright size={14} />
       </p>
     </div>
   );

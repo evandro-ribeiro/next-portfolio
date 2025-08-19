@@ -16,7 +16,7 @@ export default function ProjectLeftSide({
   icons: IconType[];
 }) {
   return (
-    <section className="flex gap-4 py-6 flex-col md:flex-row">
+    <section className="flex items-center gap-4 py-6 flex-col md:flex-row">
       <Link href={link} target="blank" rel="noopener noreferrer">
         <Image
           className="rounded-lg duration-700 hover:scale-105 hover:duration-300 hover:ease-in hover:bg-orange-gradient hover:shadow-xl hover:shadow-orange-700"
@@ -26,8 +26,8 @@ export default function ProjectLeftSide({
           height={600}
         />
       </Link>
-      <article className="md:w-2/3 rounded-3xl p-6 gap-8 flex flex-col justify-center">
-        <h3 className="text-2xl font-bold bg-orange-gradient bg-clip-text text-transparent">
+      <article className="md:w-2/3 rounded-3xl px-6 gap-8 flex flex-col justify-center">
+        <h3 className="text-2xl font-bold bg-text-blue-gradient bg-clip-text text-transparent">
           {title}
         </h3>
         <p className="text-sm md:text-base">{description}</p>

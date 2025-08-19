@@ -1,4 +1,3 @@
-import { BsFiletypeScss } from "react-icons/bs";
 import { FaCss3Alt, FaHtml5, FaReact } from "react-icons/fa";
 import { SiJavascript, SiNextdotjs, SiTailwindcss } from "react-icons/si";
 import ProjectLeftSide from "./projectLeftSide";
@@ -8,8 +7,8 @@ export default function ProjectsSection() {
   return (
     <section id="portfolio">
       <div className="flex flex-col pt-10 mb-10 gap-12 items-center text-center">
-        <h2 className="text-xl md:text-4xl text-cyan-900 md:w-1/4">
-          Veja algumas das <b>nossas aplicações</b>
+        <h2 className="text-xl md:text-4xl text-cyan-900 md:w-1/2">
+          Veja alguns dos <b>nossos projetos</b>
         </h2>
       </div>
 
@@ -35,21 +34,21 @@ export default function ProjectsSection() {
         />
 
         <ProjectLeftSide
-          link={"https://evandro-ribeiro.github.io/js-monks-challenge/"}
-          imgPath={"/project3.png"}
-          title={"Monks Web"}
+          link={"https://petshop-compass.vercel.app/"}
+          imgPath={"/project4.png"}
+          title={"PetShop Paws n' Play"}
           description={
-            "Landing page desenvolvida com foco em utilização de menor quantidade de bibliotecas para melhorar performance e simplicidade do projeto"
+            "Projeto minimalista desenvolvido com foco em tamanhos de tela específicos (Desktop para 1024px e 1440px, mobile para 390px), conforme critérios de aceite"
           }
           icons={[FaHtml5, FaCss3Alt, SiJavascript]}
         />
 
         <ProjectRightSide
-          link={"https://petshop-compass.vercel.app/"}
-          imgPath={"/project4.png"}
-          title={"PetShop Paws n' Play"}
+          link={"https://evandro-ribeiro.github.io/js-monks-challenge/"}
+          imgPath={"/project3.png"}
+          title={"Monks Web"}
           description={
-            "Projeto minimalista desenvolvido com foco apenas em dois tamanhos de tela específicos (1440px e 390px), conforme critérios de aceite."
+            "Landing page desenvolvida com foco em utilização de menor quantidade de bibliotecas para melhorar performance e simplicidade do projeto"
           }
           icons={[FaHtml5, FaCss3Alt, SiJavascript]}
         />
