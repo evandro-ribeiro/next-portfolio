@@ -7,10 +7,14 @@ import {
   FaWordpress,
   FaNode,
   FaDocker,
+  FaAws,
+  FaGitAlt,
+  FaGithub,
 } from "react-icons/fa";
 import {
   SiJavascript,
   SiJest,
+  SiNestjs,
   SiNextdotjs,
   SiPostgresql,
   SiTailwindcss,
@@ -20,6 +24,7 @@ import Link from "next/link";
 import Navbar from "./navbar";
 import Stack from "./stacks";
 import { GrMysql } from "react-icons/gr";
+import { TbBrandTypescript } from "react-icons/tb";
 
 export default function InitialBanner() {
   const defaultAnimations = {
@@ -97,11 +102,23 @@ export default function InitialBanner() {
           </Link>
         </motion.div>
 
-        <ul className="flex justify-center flex-wrap gap-4 md:gap-8 mt-14">
+        <ul className="flex justify-center flex-wrap gap-4 mt-14 md:gap-8 md:px-4">
           <Stack
-            Icon={FaNode}
-            title="Node.js"
-            colorItem="shadow-green-400 text-green-400 hover:text-green-400 hover:shadow-green-400"
+            Icon={FaReact}
+            title="React.js"
+            colorItem="shadow-sky-300 text-sky-700 hover:text-sky-700 hover:shadow-sky-300"
+          />
+
+          <Stack
+            Icon={SiNextdotjs}
+            title="Next.js"
+            colorItem="shadow-gray-300 text-gray-600 hover:text-gray-600 hover:shadow-gray-300"
+          />
+
+          <Stack
+            Icon={TbBrandTypescript}
+            title="TypeScript"
+            colorItem="shadow-blue-300 text-blue-300 hover:text-blue-300 hover:shadow-blue-300"
           />
 
           <Stack
@@ -123,27 +140,21 @@ export default function InitialBanner() {
           />
 
           <Stack
-            Icon={FaWordpress}
-            title="WordPress"
-            colorItem="shadow-cyan-300 text-cyan-600 hover:text-cyan-600 hover:shadow-cyan-300"
-          />
-
-          <Stack
-            Icon={FaReact}
-            title="React.js"
-            colorItem="shadow-sky-300 text-sky-700 hover:text-sky-700 hover:shadow-sky-300"
-          />
-
-          <Stack
-            Icon={SiNextdotjs}
-            title="Next.js"
-            colorItem="shadow-gray-300 text-gray-600 hover:text-gray-600 hover:shadow-gray-300"
-          />
-
-          <Stack
             Icon={SiTailwindcss}
             title="Tailwind"
             colorItem="shadow-blue-100 text-blue-300 hover:text-blue-300 hover:shadow-blue-100"
+          />
+
+          <Stack
+            Icon={FaNode}
+            title="Node.js"
+            colorItem="shadow-green-400 text-green-400 hover:text-green-400 hover:shadow-green-400"
+          />
+
+          <Stack
+            Icon={SiNestjs}
+            title="NestJS"
+            colorItem="shadow-red-400 text-red-400 hover:text-red-400 hover:shadow-red-400"
           />
 
           <Stack
@@ -165,9 +176,33 @@ export default function InitialBanner() {
           />
 
           <Stack
+            Icon={FaWordpress}
+            title="WordPress"
+            colorItem="shadow-cyan-300 text-cyan-600 hover:text-cyan-600 hover:shadow-cyan-300"
+          />
+
+          <Stack
             Icon={SiJest}
-            title="Jest.js"
+            title="Jest"
             colorItem="shadow-orange-300 text-orange-700 hover:text-orange-700 hover:shadow-orange-300"
+          />
+
+          <Stack
+            Icon={FaAws}
+            title="AWS"
+            colorItem="shadow-orange-300 text-orange-400 hover:text-orange-400 hover:shadow-orange-300"
+          />
+
+          <Stack
+            Icon={FaGitAlt}
+            title="Git"
+            colorItem="shadow-orange-300 text-orange-700 hover:text-orange-700 hover:shadow-orange-300"
+          />
+
+          <Stack
+            Icon={FaGithub}
+            title="GitHub"
+            colorItem="shadow-gray-700 text-black hover:text-black hover:shadow-gray-700"
           />
         </ul>
       </div>
