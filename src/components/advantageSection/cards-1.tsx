@@ -29,25 +29,26 @@ export default function Cards1() {
         </svg>
         <BsPersonFillCheck size={50} style={{ fill: "url(#green-gradient)" }} />
         <h4 className="font-bold text-lg pt-4">Credibilidade</h4>
-        <p className="text-gray-400 text-sm font-semibold">
-          Com um site de qualidade, você pode transmitir maior profissionalismo
-          e confiança aos clientes e fornecedores
+        <p className="text-gray-400 text-sm">
+          Ter um site bem estruturado é o seu cartão de visitas digital. Ele
+          transmite a seriedade e o profissionalismo do seu negócio
         </p>
       </div>
       <div className="bg-white w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2">
         <MdVisibility size={50} style={{ fill: "url(#green-gradient)" }} />
         <h4 className="font-bold text-lg pt-4">Visibilidade</h4>
-        <p className="text-gray-400 text-sm font-semibold">
-          Com um site de qualidade, você pode transmitir maior profissionalismo
-          e confiança aos clientes e fornecedores
+        <p className="text-gray-400 text-sm">
+          Com um site, você rompe as barreiras geográficas e passa a ser visível
+          para milhares de pessoas que buscam por seus produtos ou serviços na
+          internet
         </p>
       </div>
       <div className="bg-white w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2">
         <FaHandshake size={50} style={{ fill: "url(#green-gradient)" }} />
         <h4 className="font-bold text-lg pt-4">Contato com clientes</h4>
-        <p className="text-gray-400 text-sm font-semibold">
-          Com um site de qualidade, você pode transmitir maior profissionalismo
-          e confiança aos clientes e fornecedores
+        <p className="text-gray-400 text-sm">
+          Um site oferece diversos canais de contato, permitindo que os clientes
+          tirem dúvidas e se conectem com sua marca de forma rápida e eficiente
         </p>
       </div>
     </motion.div>

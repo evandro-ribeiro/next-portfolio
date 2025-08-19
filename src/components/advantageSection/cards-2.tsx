@@ -29,9 +29,10 @@ export default function Cards2() {
         </svg>
         <BsGraphUpArrow size={50} style={{ fill: "url(#blue-gradient)" }} />
         <h4 className="font-bold text-lg pt-4">Aumento das Vendas</h4>
-        <p className="text-gray-400 text-sm font-semibold">
-          Com um site de qualidade, você pode transmitir maior profissionalismo
-          e confiança aos clientes e fornecedores
+        <p className="text-gray-400 text-sm">
+          Um site é uma poderosa ferramenta de vendas, apresentando seus
+          produtos e serviços de forma atrativa e direcionando os usuários para
+          a ação
         </p>
       </div>
       <div className="bg-white w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2">
@@ -40,17 +41,19 @@ export default function Cards2() {
           style={{ fill: "url(#blue-gradient)" }}
         />
         <h4 className="font-bold text-lg pt-4">Mensuração</h4>
-        <p className="text-gray-400 text-sm font-semibold">
-          Com um site de qualidade, você pode transmitir maior profissionalismo
-          e confiança aos clientes e fornecedores
+        <p className="text-gray-400 text-sm">
+          Com um site, você tem acesso a dados sobre o comportamento dos seus
+          visitantes, permitindo entender o que funciona, otimizar suas
+          estratégias e tomar decisões mais assertivas
         </p>
       </div>
       <div className="bg-white w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2">
         <GiMeshNetwork size={50} style={{ fill: "url(#blue-gradient)" }} />
         <h4 className="font-bold text-lg pt-4">Estratégias de Marketing</h4>
-        <p className="text-gray-400 text-sm font-semibold">
-          Com um site de qualidade, você pode transmitir maior profissionalismo
-          e confiança aos clientes e fornecedores
+        <p className="text-gray-400 text-sm">
+          Um site é a base para a maioria das estratégias de marketing digital.
+          Com ele, você pode potencializar o alcance da sua marca e atrair mais
+          clientes
         </p>
       </div>
     </motion.div>

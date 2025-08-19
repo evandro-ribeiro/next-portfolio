@@ -28,27 +28,27 @@ export default function Cards3() {
         </svg>
         <GiLaurelsTrophy size={50} style={{ fill: "url(#yellow-gradient)" }} />
         <h4 className="font-bold text-lg pt-4">Fortalecimento da Marca</h4>
-        <p className="text-gray-400 text-sm font-semibold">
-          Com um site de qualidade, você pode transmitir maior profissionalismo
-          e confiança aos clientes e fornecedores
+        <p className="text-gray-400 text-sm">
+          Um site permite que você comunique características da sua empresa,
+          criando uma conexão com seu público e uma percepção positiva da sua
+          marca
         </p>
       </div>
       <div className="bg-white w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2">
         <GiMoneyStack size={50} style={{ fill: "url(#yellow-gradient)" }} />
         <h4 className="font-bold text-lg pt-4">Custo x Benefício</h4>
-        <p className="text-gray-400 text-sm font-semibold">
-          Com um site de qualidade, você pode transmitir maior profissionalismo
-          e confiança aos clientes e fornecedores
+        <p className="text-gray-400 text-sm">
+          Ter um site é um bom investimento, pois os custos de manutenção são
+          baixos em comparação com as oportunidades de negócio que ele gera
         </p>
       </div>
       <div className="bg-white w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2">
         <SiTestcafe size={50} style={{ fill: "url(#yellow-gradient)" }} />
-        <h4 className="font-bold text-lg pt-4">
-          Personalizado com o seu estilo
-        </h4>
-        <p className="text-gray-400 text-sm font-semibold">
-          Com um site de qualidade, você pode transmitir maior profissionalismo
-          e confiança aos clientes e fornecedores
+        <h4 className="font-bold text-lg pt-4">Sites Personalizados</h4>
+        <p className="text-gray-400 text-sm">
+          Os projetos refletem a identidade visual e personalidade do seu
+          negócio, garantindo uma experiência autêntica e marcante para os
+          visitantes
         </p>
       </div>
     </motion.div>
