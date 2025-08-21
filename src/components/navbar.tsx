@@ -8,7 +8,7 @@ export default function Navbar() {
     "backdrop-blur-sm text-zinc-50 hover:bg-blue-gradient hover:duration-75 hover:ease-in p-2 rounded-full";
 
   return (
-    <section>
+    <section className="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-sm">
       <motion.div
         className="flex justify-center md:mx-6 py-4 md:px-20 px-4 items-center text-xs md:text-base"
         initial={{ y: -100, opacity: 0 }}
@@ -21,6 +21,9 @@ export default function Navbar() {
           </Link>
           <Link className={borderBottom} href={"#portfolio"}>
             Portfolio
+          </Link>
+          <Link className={borderBottom} href={"#certificacoes"}>
+            Certificações
           </Link>
           <Link className={borderBottom} href={"#advantages"}>
             Vantagens

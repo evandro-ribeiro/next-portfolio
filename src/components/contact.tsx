@@ -45,7 +45,7 @@ export default function Contact() {
         </h3>
       </div>
       <Link
-        href={"https://wa.me/5544998132956"}
+        href={"https://wa.me/5544999561963"}
         target="blank"
         rel="noopener noreferrer"
       >

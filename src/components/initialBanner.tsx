@@ -93,7 +93,7 @@ export default function InitialBanner() {
           </div>
 
           <Link
-            href={"https://wa.me/5544998132956"}
+            href={"https://wa.me/5544999561963"}
             target="blank"
             rel="noopener noreferrer"
             className="border-2 text-blue-200 rounded-full text-sm md:text-base p-1 md:p-3 md:w-52 hover:scale-110 hover:shadow-lg hover:shadow-blue-500 hover:bg-sky-50 hover:font-bold duration-300"
@@ -202,7 +202,7 @@ export default function InitialBanner() {
           <Stack
             Icon={FaGithub}
             title="GitHub"
-            colorItem="shadow-gray-700 text-black hover:text-black hover:shadow-gray-700"
+            colorItem="shadow-neutral-700 text-neutral-500 hover:text-neutral-500 hover:shadow-neutral-700"
           />
         </ul>
       </div>

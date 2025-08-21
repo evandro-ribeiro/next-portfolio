@@ -20,7 +20,6 @@ export default function CertificationCard({
       contentStyle={{
         background: backgroundColor,
         color: "#fff",
-        visibility: "visible",
         display: "flex",
         gap: "1rem",
         justifyContent: "space-between",
@@ -36,6 +35,7 @@ export default function CertificationCard({
       icon={icon}
       date={date}
       dateClassName="text-gray-700 text-lg"
+      visible={true}
     >
       <h3 className="vertical-timeline-element-title">{title}</h3>
       <h4 className="vertical-timeline-element-subtitle text-purple-600 font-semibold bg-purple-200 rounded-xl py-1 px-2 text-center">
