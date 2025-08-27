@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 export default function AdvantagesSection() {
   return (
     <section
-      className="bg-cyan-50 h-fit flex items-center flex-col py-10 md:gap-2"
+      className="h-fit flex items-center flex-col py-10 md:gap-2"
       id="advantages"
     >
       <motion.h2

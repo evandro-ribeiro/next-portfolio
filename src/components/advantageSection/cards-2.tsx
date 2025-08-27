@@ -6,6 +6,9 @@ import { GiMeshNetwork } from "react-icons/gi";
 import { TbDeviceDesktopAnalytics } from "react-icons/tb";
 
 export default function Cards2() {
+  const divStyle =
+    "bg-gray-800 w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2 border-2 border-gray-700";
+
   return (
     <motion.div
       className="flex flex-col gap-10 w-full items-center lg:w-fit"
@@ -14,7 +17,7 @@ export default function Cards2() {
       viewport={{ once: true }}
       transition={{ duration: 2 }}
     >
-      <div className="bg-white w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2">
+      <div className={divStyle}>
         <svg width="0" height="0">
           <linearGradient
             id="blue-gradient"
@@ -35,7 +38,7 @@ export default function Cards2() {
           a ação
         </p>
       </div>
-      <div className="bg-white w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2">
+      <div className={divStyle}>
         <TbDeviceDesktopAnalytics
           size={50}
           style={{ fill: "url(#blue-gradient)" }}
@@ -47,7 +50,7 @@ export default function Cards2() {
           estratégias e tomar decisões mais assertivas
         </p>
       </div>
-      <div className="bg-white w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2">
+      <div className={divStyle}>
         <GiMeshNetwork size={50} style={{ fill: "url(#blue-gradient)" }} />
         <h4 className="font-bold text-lg pt-4">Estratégias de Marketing</h4>
         <p className="text-gray-400 text-sm">

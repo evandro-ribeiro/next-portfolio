@@ -14,7 +14,7 @@ const config = {
     backgroundImage: {
       "blue-gradient": "linear-gradient(to left, #8f8fff, #3d00de)",
       "dark-blue-gradient": "linear-gradient(to left, #8f8f55, #3d00cc)",
-      "dark-gradient": "linear-gradient(to bottom, #ffffff, #020051, #002610)",
+      "dark-gradient": "linear-gradient(to top, #9f7a26, #020051, #111828)",
       "orange-gradient":
         "linear-gradient(to bottom, #ffffff, #F5DD61, #FBA834)",
       "text-blue-gradient":

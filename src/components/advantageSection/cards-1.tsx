@@ -6,6 +6,9 @@ import { FaHandshake } from "react-icons/fa";
 import { MdVisibility } from "react-icons/md";
 
 export default function Cards1() {
+  const divStyle =
+    "bg-gray-800 w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2 border-2 border-gray-700";
+
   return (
     <motion.div
       className="flex flex-col gap-10 pt-14 md:pt-2 lg:pt-14 w-full items-center lg:w-fit pb-8"
@@ -14,7 +17,7 @@ export default function Cards1() {
       viewport={{ once: true }}
       transition={{ duration: 2 }}
     >
-      <div className="bg-white w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2">
+      <div className={divStyle}>
         <svg width="0" height="0">
           <linearGradient
             id="green-gradient"
@@ -34,7 +37,7 @@ export default function Cards1() {
           transmite a seriedade e o profissionalismo do seu negócio
         </p>
       </div>
-      <div className="bg-white w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2">
+      <div className={divStyle}>
         <MdVisibility size={50} style={{ fill: "url(#green-gradient)" }} />
         <h4 className="font-bold text-lg pt-4">Visibilidade</h4>
         <p className="text-gray-400 text-sm">
@@ -43,7 +46,7 @@ export default function Cards1() {
           internet
         </p>
       </div>
-      <div className="bg-white w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2">
+      <div className={divStyle}>
         <FaHandshake size={50} style={{ fill: "url(#green-gradient)" }} />
         <h4 className="font-bold text-lg pt-4">Contato com clientes</h4>
         <p className="text-gray-400 text-sm">

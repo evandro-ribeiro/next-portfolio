@@ -5,6 +5,9 @@ import { GiLaurelsTrophy, GiMoneyStack } from "react-icons/gi";
 import { SiTestcafe } from "react-icons/si";
 
 export default function Cards3() {
+  const divStyle =
+    "bg-gray-800 w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2 border-2 border-gray-700";
+
   return (
     <motion.div
       className="flex flex-col gap-10 pt-7 lg:pt-14 w-full items-center lg:w-fit"
@@ -13,7 +16,7 @@ export default function Cards3() {
       viewport={{ once: true }}
       transition={{ duration: 2 }}
     >
-      <div className="bg-white w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2">
+      <div className={divStyle}>
         <svg width="0" height="0">
           <linearGradient
             id="yellow-gradient"
@@ -34,7 +37,7 @@ export default function Cards3() {
           marca
         </p>
       </div>
-      <div className="bg-white w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2">
+      <div className={divStyle}>
         <GiMoneyStack size={50} style={{ fill: "url(#yellow-gradient)" }} />
         <h4 className="font-bold text-lg pt-4">Custo x Benefício</h4>
         <p className="text-gray-400 text-sm">
@@ -42,7 +45,7 @@ export default function Cards3() {
           baixos em comparação com as oportunidades de negócio que ele gera
         </p>
       </div>
-      <div className="bg-white w-80 rounded-xl p-5 h-56 shadow-xl flex flex-col gap-2">
+      <div className={divStyle}>
         <SiTestcafe size={50} style={{ fill: "url(#yellow-gradient)" }} />
         <h4 className="font-bold text-lg pt-4">Sites Personalizados</h4>
         <p className="text-gray-400 text-sm">

@@ -8,7 +8,7 @@ import ProjectsSection from "@/components/projectSection/projectsSection";
 
 export default function Home() {
   return (
-    <main className="font-montserrat">
+    <main className="font-montserrat bg-gray-900 text-gray-200">
       <InitialBanner />
       <ProjectsSection />
       <CertificationSection />

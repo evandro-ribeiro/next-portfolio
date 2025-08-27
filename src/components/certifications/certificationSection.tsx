@@ -32,7 +32,7 @@ export default function CertificationSection() {
     "linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 121, 91, 1) 35%, rgba(0, 255, 204, 1) 100%)";
 
   return (
-    <section className="bg-[#F8F9FA] h-fit" id="certificacoes">
+    <section className="h-fit" id="certificacoes">
       <h2 className="text-center font-bold text-4xl pt-10">Certificações</h2>
       <VerticalTimeline
         lineColor="#000"
