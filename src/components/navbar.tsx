@@ -1,7 +1,8 @@
 "use client";
 
-import { motion, stagger } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const borderBottom =
@@ -15,9 +16,9 @@ export default function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 40 }}
       >
-        <div className="text-gray-500 flex md:gap-14 md:pr-20">
-          <Link className={borderBottom} href={"/"}>
-            Home
+        <div className="flex items-center text-gray-500 md:gap-14 md:pr-20">
+          <Link href={"/"}>
+            <Image src="./logo.svg" alt="Logo" width={180} height={180} />
           </Link>
           <Link className={borderBottom} href={"#portfolio"}>
             Portfolio
