@@ -45,16 +45,9 @@ export default function InitialBanner() {
   const title = "Desenvolvedor Full Stack";
 
   return (
-    <section className="relative overflow-hidden w-full">
-      <video
-        src="/bg-video.mp4"
-        autoPlay
-        loop
-        muted
-        className="absolute top-0 -z-10 object-cover h-full w-full"
-      />
+    <section className="bg-bg-principal bg-no-repeat bg-contain relative overflow-hidden w-full h-fit lg:bg-cover">
       <Navbar />
-      <div className="flex flex-col justify-center pt-10 pb-6 xs:py-14 xs:mb-1 md:pt-10 md:pb-6 backdrop-blur-sm">
+      <div className="flex flex-col justify-center pt-10 pb-6 xs:py-12 xs:mb-1 mt-14 md:pb-6 backdrop-blur-sm">
         <motion.div
           className="flex flex-col text-center gap-2 md:gap-14 md:py-0 md:pt-16 justify-center items-center"
           initial={{ opacity: 0, scale: 0.5 }}
@@ -65,7 +58,7 @@ export default function InitialBanner() {
         >
           <div className="md:w-1/2">
             <motion.p
-              className="text-lg md:text-5xl text-[#F0EDCF] pb-2"
+              className="text-2xl md:text-5xl text-[#F0EDCF] pb-2"
               initial="hidden"
               animate="visible"
               transition={{ staggerChildren: 0.1 }}
@@ -73,7 +66,7 @@ export default function InitialBanner() {
               {title.split("").map((char, index) => (
                 <motion.span
                   key={index}
-                  className="italic text-amber-400 font-semibold"
+                  className="italic text-orange font-semibold"
                   variants={defaultAnimations}
                 >
                   {char}
@@ -81,11 +74,11 @@ export default function InitialBanner() {
               ))}
             </motion.p>
 
-            <h1 className="text-3xl font-bold bg-text-dark-gradient text-transparent bg-clip-text pb-4  lg:text-5xl">
+            <h1 className="text-3xl font-bold bg-text-dark-gradient text-transparent bg-clip-text pb-4 lg:text-5xl">
               Evandro Machado
             </h1>
 
-            <p className="text-zinc-50 mx-6 md:mx-0 md:pt-4 pb-4 md:pb-0 text-xs md:text-base md:block">
+            <p className="text-gray-300 mx-6 md:mx-0 md:pt-4 pb-4 md:pb-0 text-xs md:text-base">
               Desenvolvimento de aplicações web com responsividade, dinamismo e
               interatividade. Sempre buscando as melhores práticas, evoluindo os
               projetos em cada detalhe!
@@ -96,13 +89,13 @@ export default function InitialBanner() {
             href={"https://wa.me/5544999561963"}
             target="blank"
             rel="noopener noreferrer"
-            className="border-2 text-blue-200 rounded-full text-sm md:text-base p-1 md:p-3 md:w-52 hover:scale-110 hover:shadow-lg hover:shadow-blue-500 hover:bg-sky-50 hover:font-bold duration-300"
+            className="border-2 border-gray-400 text-gray-200 rounded-full text-sm md:text-base p-2 md:p-3 md:w-52 hover:scale-110 hover:shadow-lg hover:shadow-blue-500 hover:bg-gray-200 hover:font-bold hover:text-sky-500 duration-300"
           >
             Entre em contato
           </Link>
         </motion.div>
 
-        <ul className="flex justify-center flex-wrap gap-4 mt-14 md:gap-8 md:px-4">
+        <ul className="flex justify-center flex-wrap gap-6 my-12 lg:mt-20 md:gap-8 px-4">
           <Stack
             Icon={FaReact}
             title="React.js"
@@ -112,7 +105,7 @@ export default function InitialBanner() {
           <Stack
             Icon={SiNextdotjs}
             title="Next.js"
-            colorItem="shadow-gray-300 text-gray-600 hover:text-gray-600 hover:shadow-gray-300"
+            colorItem="shadow-gray-300 text-gray-600 hover:text-gray-500 hover:shadow-gray-500"
           />
 
           <Stack
@@ -130,7 +123,7 @@ export default function InitialBanner() {
           <Stack
             Icon={FaHtml5}
             title="HTML"
-            colorItem="shadow-orange-300 text-orange-600 hover:text-orange-600 hover:shadow-orange-300"
+            colorItem="shadow-[#e2542e] text-[#e2542e] hover:text-[#e2542e] hover:shadow-[#e2542e]"
           />
 
           <Stack
@@ -142,7 +135,7 @@ export default function InitialBanner() {
           <Stack
             Icon={SiTailwindcss}
             title="Tailwind"
-            colorItem="shadow-blue-100 text-blue-300 hover:text-blue-300 hover:shadow-blue-100"
+            colorItem="shadow-sky-100 text-sky-300 hover:text-sky-300 hover:shadow-sky-500"
           />
 
           <Stack
@@ -160,49 +153,49 @@ export default function InitialBanner() {
           <Stack
             Icon={FaDocker}
             title="Docker"
-            colorItem="shadow-blue-100 text-blue-400 hover:text-blue-400 hover:shadow-blue-100"
+            colorItem="shadow-blue-100 text-blue-400 hover:text-blue-400 hover:shadow-blue-400"
           />
 
           <Stack
             Icon={GrMysql}
             title="MySQL"
-            colorItem="shadow-sky-300 text-sky-700 hover:text-sky-700 hover:shadow-sky-300"
+            colorItem="shadow-sky-300 text-sky-700 hover:text-sky-700 hover:shadow-sky-400"
           />
 
           <Stack
             Icon={SiPostgresql}
             title="PostgreSQL"
-            colorItem="shadow-cyan-200 text-cyan-300 hover:text-cyan-300 hover:shadow-cyan-200"
+            colorItem="shadow-cyan-200 text-cyan-300 hover:text-cyan-300 hover:shadow-cyan-500"
           />
 
           <Stack
             Icon={FaWordpress}
             title="WordPress"
-            colorItem="shadow-cyan-300 text-cyan-600 hover:text-cyan-600 hover:shadow-cyan-300"
+            colorItem="shadow-cyan-300 text-cyan-600 hover:text-cyan-600 hover:shadow-cyan-500"
           />
 
           <Stack
             Icon={SiJest}
             title="Jest"
-            colorItem="shadow-orange-300 text-orange-700 hover:text-orange-700 hover:shadow-orange-300"
+            colorItem="shadow-[#c8421c] text-[#c8421c] hover:text-[#c8421c] hover:shadow-[#c8421c]"
           />
 
           <Stack
             Icon={FaAws}
             title="AWS"
-            colorItem="shadow-orange-300 text-orange-400 hover:text-orange-400 hover:shadow-orange-300"
+            colorItem="shadow-[#ff9c08] text-[#ff9c08] hover:text-[#ff9c08] hover:shadow-[#ff9c08]"
           />
 
           <Stack
             Icon={FaGitAlt}
             title="Git"
-            colorItem="shadow-orange-300 text-orange-700 hover:text-orange-700 hover:shadow-orange-300"
+            colorItem="shadow-[#f05539] text-[#f05539] hover:text-[#f05539] hover:shadow-[#f05539]"
           />
 
           <Stack
             Icon={FaGithub}
             title="GitHub"
-            colorItem="shadow-neutral-700 text-neutral-500 hover:text-neutral-500 hover:shadow-neutral-700"
+            colorItem="shadow-neutral-700 text-neutral-500 hover:text-neutral-300 hover:shadow-neutral-500"
           />
         </ul>
       </div>
