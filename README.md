@@ -1,6 +1,3 @@
-<img width="100%" src="./public/banner-readme.png" alt="Banner do Portfólio"/>
-<hr />
-
 # 🌐 Portfólio – Evandro Machado
 
 Bem-vindo ao repositório do meu portfólio profissional!  
