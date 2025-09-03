@@ -34,7 +34,7 @@ export default function CertificationCard({
       }}
       icon={icon}
       date={date}
-      dateClassName="text-gray-700 text-lg"
+      dateClassName="text-gray-100 text-lg"
       visible={true}
     >
       <h3 className="vertical-timeline-element-title">{title}</h3>
