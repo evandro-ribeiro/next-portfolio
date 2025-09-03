@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Contact() {
   const spanVariants = {
-    initialColor: { color: "#FFF801" },
+    initialColor: { color: "var(--orange)" },
     transitionColor: {
       color: "#ffb01e",
       opacity: 1,
@@ -21,11 +21,11 @@ export default function Contact() {
 
   return (
     <div
-      className="flex flex-col lg:flex-row gap-6 lg:gap-32 justify-center py-24 items-center bg-dark-gradient h-96"
+      className="flex flex-col lg:flex-row gap-6 lg:gap-32 justify-center py-24 items-center bg-dark-gradient-top h-96"
       id="contact"
     >
       <div className="text-center flex flex-col gap-6 md:gap-14">
-        <h2 className="text-white text-2xl md:text-3xl font-bold">
+        <h2 className="text-gray-200 text-2xl md:text-3xl font-bold">
           Deseja criar o
           <motion.span
             initial="initialColor"
@@ -39,7 +39,7 @@ export default function Contact() {
             ))}
           </motion.span>
         </h2>
-        <h3 className="text-white text-xs md:text-base">
+        <h3 className="text-gray-200 text-xs md:text-base">
           Entre em contato e inicie o projeto <br />
           do seu espaço digital!
         </h3>
@@ -50,7 +50,7 @@ export default function Contact() {
         rel="noopener noreferrer"
       >
         <motion.button
-          className="text-white border-4 rounded-full p-2 md:p-4"
+          className="text-gray-200 border-4 border-gray-300 rounded-full p-2 md:p-4"
           whileHover={{
             scale: 1.2,
             textShadow: "0px 0px 8px rgb(255,255,255)",

@@ -20,7 +20,7 @@ export default function Cards2() {
       <div className={divStyle}>
         <svg width="0" height="0">
           <linearGradient
-            id="blue-gradient"
+            id="dark-blue-gradient"
             x1="100%"
             y1="100%"
             x2="0%"
@@ -30,7 +30,10 @@ export default function Cards2() {
             <stop stopColor="#591885" offset="100%" />
           </linearGradient>
         </svg>
-        <BsGraphUpArrow size={50} style={{ fill: "url(#blue-gradient)" }} />
+        <BsGraphUpArrow
+          size={50}
+          style={{ fill: "url(#dark-blue-gradient)" }}
+        />
         <h4 className="font-bold text-lg pt-4">Aumento das Vendas</h4>
         <p className="text-gray-400 text-sm">
           Um site é uma poderosa ferramenta de vendas, apresentando seus
@@ -41,7 +44,7 @@ export default function Cards2() {
       <div className={divStyle}>
         <TbDeviceDesktopAnalytics
           size={50}
-          style={{ fill: "url(#blue-gradient)" }}
+          style={{ fill: "url(#dark-blue-gradient)" }}
         />
         <h4 className="font-bold text-lg pt-4">Mensuração</h4>
         <p className="text-gray-400 text-sm">
@@ -51,7 +54,7 @@ export default function Cards2() {
         </p>
       </div>
       <div className={divStyle}>
-        <GiMeshNetwork size={50} style={{ fill: "url(#blue-gradient)" }} />
+        <GiMeshNetwork size={50} style={{ fill: "url(#dark-blue-gradient)" }} />
         <h4 className="font-bold text-lg pt-4">Estratégias de Marketing</h4>
         <p className="text-gray-400 text-sm">
           Um site é a base para a maioria das estratégias de marketing digital.

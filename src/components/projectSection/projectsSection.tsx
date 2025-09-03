@@ -6,13 +6,16 @@ import ProjectRightSide from "./projectRightSide";
 export default function ProjectsSection() {
   return (
     <section id="portfolio">
-      <div className="flex flex-col pt-10 mb-10 gap-12 items-center text-center">
-        <h2 className="text-xl md:text-4xl text-cyan-900 md:w-1/2">
-          Veja alguns dos <b>nossos projetos</b>
+      <div className="flex flex-col md:pt-10 mb-10 gap-12 items-center text-center">
+        <h2 className="text-2xl md:text-4xl text-gray-300 md:w-1/2">
+          Veja alguns dos{" "}
+          <b className="text-transparent bg-clip-text bg-dark-blue-gradient">
+            projetos realizados
+          </b>
         </h2>
       </div>
 
-      <div className="md:pb-20 md:mx-32 mx-10">
+      <section className="flex flex-col gap-12 md:pb-20 md:mx-32 mx-10">
         <ProjectLeftSide
           link={"https://meva-consultoria.vercel.app/"}
           imgPath={"/project1.png"}
@@ -52,7 +55,7 @@ export default function ProjectsSection() {
           }
           icons={[FaHtml5, FaCss3Alt, SiJavascript]}
         />
-      </div>
+      </section>
     </section>
   );
 }

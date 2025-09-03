@@ -33,9 +33,11 @@ export default function CertificationSection() {
 
   return (
     <section className="h-fit" id="certificacoes">
-      <h2 className="text-center font-bold text-4xl pt-10">Certificações</h2>
+      <h2 className="text-center font-bold text-4xl pt-10 text-transparent bg-clip-text bg-orange-gradient">
+        Certificações
+      </h2>
       <VerticalTimeline
-        lineColor="#000"
+        lineColor="#ff8300"
         layout="2-columns"
         animate={true}
         className="h-full"
