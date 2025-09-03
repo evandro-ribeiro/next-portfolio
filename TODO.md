@@ -1,7 +1,0 @@
-- Pegar cores da logo e colocar no CSS global, colocar também a cor do fundo da página e do texto global
-- Colocar uma foto minha no banner inicial e algum outro detalhe para ficar atraente
-- Padronizar os títulos das seções
-- Colocar a linha da timeline de laranja da logo
-- Mudar o fundo dos cards de benefícios, fundo cinza (usado no titulo do card) e titulo do card em laranja
-- Arrumar footer com a cor laranja
-- Arrumar background da navbar

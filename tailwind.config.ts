@@ -12,14 +12,17 @@ const config = {
   prefix: "",
   theme: {
     backgroundImage: {
-      "blue-gradient": "linear-gradient(to left, #8f8fff, #3d00de)",
-      "dark-blue-gradient": "linear-gradient(to left, #8f8f55, #3d00cc)",
-      "dark-gradient": "linear-gradient(to top, #9f7a26, #020051, #111828)",
+      "dark-blue-gradient":
+        "linear-gradient(to right, #095063, #0B397D, #4C00FF)",
+      "dark-gradient-top":
+        "linear-gradient(to top, var(--orange) 0%, #020051 15%, #111828 100%)",
       "orange-gradient":
         "linear-gradient(to bottom, #ffffff, #F5DD61, #FBA834)",
-      "text-blue-gradient":
+      "text-dark-blue-gradient":
         "linear-gradient(to bottom, #ffffff, #8f8fff, #3d00de)",
       "text-dark-gradient": "linear-gradient(to bottom, #ffffff, #002610)",
+
+      "bg-principal": "url('/bg-principal.png')",
     },
     fontFamily: {
       montserrat: ["Montserrat", "sans-serif"],
@@ -40,40 +43,10 @@ const config = {
     },
     extend: {
       colors: {
-        "dark-blue": "#002610",
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+        background: "var(--background)",
+        dark_blue: "var(--dark-blue)",
+        light_blue: "var(--light-blue)",
+        orange: "var(--orange)",
       },
       borderRadius: {
         lg: "var(--radius)",
