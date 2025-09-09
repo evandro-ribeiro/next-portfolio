@@ -11,7 +11,7 @@ export default function Cards3() {
   return (
     <motion.div
       className="flex flex-col gap-10 pt-7 lg:pt-14 w-full items-center lg:w-fit"
-      initial={{ opacity: 0, x: 100 }}
+      initial={{ opacity: 0, x: -100 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 2 }}
