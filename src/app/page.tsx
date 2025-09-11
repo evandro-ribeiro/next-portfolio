@@ -13,6 +13,10 @@ export default function Home() {
       <Head>
         <title>Evandro Machado - Desenvolvedor Full Stack</title>
         <meta
+          name="google-site-verification"
+          content="51ZNu0LtCqNKyB6kkJqBsScHQev5AOTAnRQ9Vfbarj0"
+        />
+        <meta
           name="description"
           content="Conheça o portfólio de Evandro Machado, um desenvolvedor full stack apaixonado por criar soluções inovadoras."
         />
