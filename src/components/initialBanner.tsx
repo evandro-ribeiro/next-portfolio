@@ -25,6 +25,7 @@ import Navbar from "./navbar";
 import Stack from "./stacks";
 import { GrMysql } from "react-icons/gr";
 import { TbBrandTypescript } from "react-icons/tb";
+import Image from "next/image";
 
 export default function InitialBanner() {
   const defaultAnimations = {
@@ -45,7 +46,14 @@ export default function InitialBanner() {
   const title = "Desenvolvedor Full Stack";
 
   return (
-    <section className="bg-bg-principal bg-no-repeat bg-contain relative overflow-hidden w-full h-fit lg:bg-cover">
+    <section className="relative overflow-hidden w-full h-fit">
+      <Image
+        src={"/bg-principal.webp"}
+        alt="Descrição da imagem de fundo"
+        fill
+        style={{ objectFit: "contain" }}
+        priority
+      />
       <Navbar />
       <div className="flex flex-col justify-center pt-10 pb-6 xs:py-12 xs:mb-1 mt-14 md:pb-6 backdrop-blur-sm">
         <motion.div

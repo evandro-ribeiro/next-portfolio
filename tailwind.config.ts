@@ -21,11 +21,6 @@ const config = {
       "text-dark-blue-gradient":
         "linear-gradient(to bottom, #ffffff, #8f8fff, #3d00de)",
       "text-dark-gradient": "linear-gradient(to bottom, #ffffff, #002610)",
-
-      "bg-principal": "url('/bg-principal.webp')",
-    },
-    fontFamily: {
-      montserrat: ["Montserrat", "sans-serif"],
     },
     screens: {
       xs: "425px",
