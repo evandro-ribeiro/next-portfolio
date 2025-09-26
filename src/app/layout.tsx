@@ -4,8 +4,11 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
-  title: "Portfolio | Evandro Machado",
+  title: "Evandro Machado | Portfólio",
   description: "Criação de sites personalizados para você!",
+  verification: {
+    google: "51ZNu0LtCqNKyB6kkJqBsScHQev5AOTAnRQ9Vfbarj0",
+  },
 };
 
 export default function RootLayout({
@@ -15,12 +18,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <head>
-        <meta
-          name="google-site-verification"
-          content="51ZNu0LtCqNKyB6kkJqBsScHQev5AOTAnRQ9Vfbarj0"
-        />
-      </head>
       <body>
         {children}
         <Analytics />
