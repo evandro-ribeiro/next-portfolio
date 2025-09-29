@@ -49,10 +49,10 @@ export default function InitialBanner() {
     <section className="relative overflow-hidden w-full h-fit">
       <Image
         src={"/bg-principal.webp"}
-        alt="Descrição da imagem de fundo"
+        alt="Imagem de fundo da seção inicial com duas cores desfocadas"
         fill
-        style={{ objectFit: "contain" }}
         priority
+        className="w-full object-cover"
       />
       <Navbar />
       <div className="flex flex-col justify-center pt-10 pb-6 xs:py-12 xs:mb-1 mt-14 md:pb-6 backdrop-blur-sm">
@@ -103,7 +103,7 @@ export default function InitialBanner() {
           </Link>
         </motion.div>
 
-        <ul className="flex justify-center flex-wrap gap-6 my-12 lg:mt-20 md:gap-8 px-4">
+        <ul className="flex justify-center flex-wrap gap-6 my-12 lg:mt-20 md:gap-8 px-6 xl:max-w-[90%] xl:mx-auto">
           <Stack
             Icon={FaReact}
             title="React.js"
