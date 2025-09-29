@@ -5,9 +5,9 @@ import Link from "next/link";
 
 export default function Contact() {
   const spanVariants = {
-    initialColor: { color: "var(--orange)" },
+    initialColor: { color: "#fefe9c" },
     transitionColor: {
-      color: "#ffb01e",
+      color: "var(--orange)",
       opacity: 1,
       x: 0,
       transition: {
