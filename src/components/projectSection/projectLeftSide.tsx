@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { IconType } from "react-icons";
@@ -17,7 +18,13 @@ export default function ProjectLeftSide({
 }) {
   return (
     <Link href={link} target="blank" rel="noopener noreferrer">
-      <section className="flex flex-col items-center gap-4 p-6 rounded-xl border-2 border-gray-500 text-gray-200 bg-gray-700 lg:flex-row md:hover:bg-gray-800 transition-colors duration-700">
+      <motion.section
+        className="flex flex-col items-center gap-4 p-6 rounded-xl border-2 border-gray-500 text-gray-200 bg-gray-700 lg:flex-row md:hover:bg-gray-800 transition-colors duration-700"
+        initial={{ opacity: 0, y: -100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 2 }}
+      >
         <Image
           className="duration-700 hover:scale-105 hover:duration-300 hover:ease-in hover:shadow-lg hover:shadow-orange"
           src={imgPath}
@@ -38,7 +45,7 @@ export default function ProjectLeftSide({
             ))}
           </div>
         </article>
-      </section>
+      </motion.section>
     </Link>
   );
 }

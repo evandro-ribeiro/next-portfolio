@@ -1,3 +1,5 @@
+"use client";
+
 import { FaCss3Alt, FaHtml5, FaReact, FaWordpress } from "react-icons/fa";
 import { SiJavascript, SiNextdotjs, SiTailwindcss } from "react-icons/si";
 import ProjectLeftSide from "./projectLeftSide";
