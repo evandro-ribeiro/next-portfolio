@@ -12,8 +12,6 @@ export default function Navbar() {
   const navLinks = [
     { href: "#portfolio", label: "Portfolio" },
     { href: "#certificacoes", label: "Certificações" },
-    { href: "#advantages", label: "Vantagens" },
-    { href: "#faq", label: "Dúvidas" },
   ];
 
   const borderBottom =
