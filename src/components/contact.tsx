@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Contact() {
   const spanVariants = {
@@ -17,7 +18,7 @@ export default function Contact() {
     },
   };
 
-  const textForTransition = " seu site?";
+  const textForTransition = " quer saber mais?";
 
   return (
     <div
@@ -26,7 +27,7 @@ export default function Contact() {
     >
       <div className="text-center flex flex-col gap-6 md:gap-14">
         <h2 className="text-gray-200 text-2xl md:text-3xl font-bold">
-          Deseja criar o
+          Tem interesse e
           <motion.span
             initial="initialColor"
             animate="transitionColor"
@@ -40,8 +41,7 @@ export default function Contact() {
           </motion.span>
         </h2>
         <h3 className="text-gray-200 text-xs md:text-base">
-          Entre em contato e inicie o projeto <br />
-          do seu espaço digital!
+          Entre em contato para conversarmos!
         </h3>
       </div>
       <Link
@@ -50,7 +50,7 @@ export default function Contact() {
         rel="noopener noreferrer"
       >
         <motion.button
-          className="text-gray-200 border-4 border-gray-300 rounded-full p-2 md:p-4"
+          className="flex items-center gap-2 text-green-300 border-4 border-green-300 rounded-full p-2 md:p-4"
           whileHover={{
             scale: 1.2,
             textShadow: "0px 0px 8px rgb(255,255,255)",
@@ -58,7 +58,7 @@ export default function Contact() {
           }}
           transition={{ type: "spring", stiffness: 100 }}
         >
-          Entre em contato
+          Me chame no WhatsApp <FaWhatsapp size={20} />
         </motion.button>
       </Link>
     </div>
