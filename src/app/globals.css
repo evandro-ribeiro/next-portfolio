@@ -4,9 +4,291 @@
 
 @layer base {
   :root {
-    --background: #111828;
+    --background: #0a0f1e;
     --dark-blue: #0a2e65;
     --orange: #ff8300;
     --light-blue: #4c00ff;
+    --yellow: #F5DD61;
+    --orange-bright: #FBA834;
+    --glow-blue: rgba(76, 0, 255, 0.4);
+    --glow-orange: rgba(255, 131, 0, 0.4);
+    --glow-yellow: rgba(245, 221, 97, 0.3);
+    --glass-bg: rgba(10, 15, 30, 0.7);
+    --glass-border: rgba(76, 0, 255, 0.2);
+    --tech-grid: rgba(76, 0, 255, 0.08);
   }
+}
+
+/* ==================== SCROLLBAR ==================== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--light-blue), var(--orange));
+  border-radius: 3px;
+}
+
+/* ==================== TYPOGRAPHY & SMOOTH SCROLL ==================== */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==================== TECH GRID BACKGROUND ==================== */
+.tech-grid-bg {
+  background-image:
+    linear-gradient(var(--tech-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--tech-grid) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.tech-grid-bg-sm {
+  background-image:
+    linear-gradient(var(--tech-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--tech-grid) 1px, transparent 1px);
+  background-size: 25px 25px;
+}
+
+/* ==================== GLASSMORPHISM ==================== */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+}
+
+.glass-card {
+  background: rgba(10, 46, 101, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(76, 0, 255, 0.15);
+}
+
+/* ==================== GLOW EFFECTS ==================== */
+.glow-blue {
+  box-shadow: 0 0 20px var(--glow-blue), 0 0 40px var(--glow-blue);
+}
+
+.glow-orange {
+  box-shadow: 0 0 20px var(--glow-orange), 0 0 40px var(--glow-orange);
+}
+
+.glow-text-orange {
+  text-shadow: 0 0 20px var(--glow-orange);
+}
+
+.glow-text-blue {
+  text-shadow: 0 0 20px var(--glow-blue);
+}
+
+/* ==================== GRADIENT BORDER ==================== */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--light-blue), var(--orange), var(--yellow));
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ==================== ANIMATED GRADIENT BORDER ==================== */
+.animated-gradient-border {
+  position: relative;
+  z-index: 0;
+}
+
+.animated-gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    var(--angle, 0deg),
+    var(--light-blue),
+    var(--orange),
+    var(--yellow),
+    var(--light-blue)
+  );
+  animation: rotate-gradient 4s linear infinite;
+  z-index: -1;
+}
+
+.animated-gradient-border::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--background);
+  z-index: -1;
+}
+
+@keyframes rotate-gradient {
+  from { --angle: 0deg; }
+  to { --angle: 360deg; }
+}
+
+/* ==================== CURSOR BLINK ==================== */
+.typing-cursor::after {
+  content: '|';
+  animation: blink-cursor 0.8s step-end infinite;
+  color: var(--orange);
+  font-weight: 300;
+  margin-left: 2px;
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ==================== FLOATING PARTICLES ==================== */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float-particle linear infinite;
+}
+
+@keyframes float-particle {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 1; }
+  90% { opacity: 0.5; }
+  100% {
+    transform: translateY(-100px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* ==================== SCAN LINE ==================== */
+.scanline {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanline::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--light-blue), transparent);
+  animation: scan 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes scan {
+  0% { top: 0%; opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* ==================== PULSE RING ==================== */
+.pulse-ring {
+  position: relative;
+}
+
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  border: 2px solid var(--orange);
+  animation: pulse-expand 2s ease-out infinite;
+}
+
+@keyframes pulse-expand {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+/* ==================== NEON TEXT ==================== */
+.neon-text-orange {
+  color: var(--orange);
+  text-shadow:
+    0 0 7px var(--orange),
+    0 0 10px var(--orange),
+    0 0 21px var(--orange),
+    0 0 42px rgba(255, 131, 0, 0.6);
+}
+
+.neon-text-blue {
+  color: #7c5fff;
+  text-shadow:
+    0 0 7px #7c5fff,
+    0 0 10px #7c5fff,
+    0 0 21px #4c00ff,
+    0 0 42px rgba(76, 0, 255, 0.6);
+}
+
+/* ==================== TECH BADGE ==================== */
+.tech-badge {
+  background: rgba(76, 0, 255, 0.1);
+  border: 1px solid rgba(76, 0, 255, 0.3);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: rgba(76, 0, 255, 0.2);
+  border-color: rgba(76, 0, 255, 0.6);
+  box-shadow: 0 0 12px var(--glow-blue);
+}
+
+/* ==================== SECTION DIVIDER ==================== */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--light-blue), var(--orange), transparent);
+}
+
+/* ==================== REACT VERTICAL TIMELINE OVERRIDE ==================== */
+.vertical-timeline::before {
+  background: linear-gradient(to bottom, var(--light-blue), var(--orange)) !important;
+  width: 3px !important;
+}
+
+.vertical-timeline-element-content {
+  box-shadow: none !important;
+  border-radius: 12px !important;
+}
+
+.vertical-timeline-element-content-arrow {
+  border-right-color: rgba(76, 0, 255, 0.3) !important;
+}
+
+.vertical-timeline-element-date {
+  display: none !important;
+}
+
+/* ==================== CARD HOVER LIFT ==================== */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(76, 0, 255, 0.2), 0 8px 24px rgba(255, 131, 0, 0.1);
 }
