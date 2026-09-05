@@ -1,153 +1,87 @@
 "use client";
 
-import { MdScreenshotMonitor, MdSecurity } from "react-icons/md";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import CertificationCard from "./certificationCard";
-import {
-  FaAws,
-  FaDatabase,
-  FaDocker,
-  FaJava,
-  FaPython,
-  FaWordpress,
-} from "react-icons/fa";
-import {
-  SiGithubactions,
-  SiJavascript,
-  SiJest,
-  SiNestjs,
-  SiTypescript,
-} from "react-icons/si";
-import { TbBrandReactNative } from "react-icons/tb";
+import SectionHeading from "@/components/ui/SectionHeading";
+import { CERTIFICATIONS } from "@/data/portfolioData";
+
+const themes: Record<string, { cardBg: string; iconBg: string; iconColor: string; accent: string }> = {
+  "2022": {
+    cardBg: "linear-gradient(135deg, #0a1628 0%, #0b1e4a 50%, #0d2878 100%)",
+    iconBg: "#0b397d",
+    iconColor: "#7dd3fc",
+    accent: "#4C00FF",
+  },
+  "2023": {
+    cardBg: "linear-gradient(135deg, #0a1a0a 0%, #0d3320 50%, #0a4a1a 100%)",
+    iconBg: "#14532d",
+    iconColor: "#86efac",
+    accent: "#22c55e",
+  },
+  "2024": {
+    cardBg: "linear-gradient(135deg, #1a0a1e 0%, #3b0764 50%, #4c0070 100%)",
+    iconBg: "#581c87",
+    iconColor: "#d8b4fe",
+    accent: "#a855f7",
+  },
+  "2025": {
+    cardBg: "linear-gradient(135deg, #1a100a 0%, #431407 50%, #7c2d12 100%)",
+    iconBg: "#9a3412",
+    iconColor: "#fdba74",
+    accent: "#ff8300",
+  },
+  "2024 - 2025": {
+    cardBg: "linear-gradient(135deg, #1a100a 0%, #431407 50%, #7c2d12 100%)",
+    iconBg: "#9a3412",
+    iconColor: "#fdba74",
+    accent: "#ff8300",
+  },
+};
+
+function getTheme(date: string) {
+  return themes[date] || themes["2022"];
+}
 
 export default function CertificationSection() {
-  const linearGradient2022 =
-    "linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%)";
-  const linearGradient2023 =
-    "linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 121, 33, 1) 35%, rgba(0, 255, 25, 1) 100%)";
-  const linearGradient2024 =
-    "linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(121, 9, 9, 1) 35%, rgba(204, 0, 255, 1) 99%)";
-  const linearGradient2025 =
-    "linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(9, 121, 91, 1) 35%, rgba(0, 255, 204, 1) 100%)";
-
   return (
-    <section className="h-fit" id="certificacoes">
-      <h2 className="text-center font-bold text-4xl pt-10 text-transparent bg-clip-text bg-orange-gradient">
-        Certificações
-      </h2>
-      <VerticalTimeline
-        lineColor="#ff8300"
-        layout="2-columns"
-        animate={true}
-        className="h-full"
-      >
-        <CertificationCard
-          title="HTML, CSS e JavaScript"
-          subtitle="Alura"
-          icon={<SiJavascript />}
-          date="2022"
-          backgroundColor={linearGradient2022}
+    <section className="relative py-20 overflow-hidden" id="certificacoes">
+      {/* Background patterns */}
+      <div className="absolute inset-0 tech-grid-bg-sm opacity-20 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_0%,rgba(255,131,0,0.06),transparent)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_50%_100%,rgba(76,0,255,0.06),transparent)] pointer-events-none" />
+
+      <div className="relative z-10">
+        <SectionHeading
+          overline="Formação"
+          title="Certificações"
+          subtitle="Uma jornada contínua de aprendizado e especialização em tecnologia"
         />
-        <CertificationCard
-          title="Formação Front-End com React e TypeScript"
-          subtitle="Alura"
-          icon={<SiTypescript />}
-          date="2022"
-          backgroundColor={linearGradient2022}
-        />
-        <CertificationCard
-          title="WordPress, Responsividade e SEO"
-          subtitle="Alura"
-          icon={<FaWordpress />}
-          date="2022"
-          backgroundColor={linearGradient2022}
-        />
-        <CertificationCard
-          title="Formação SQL com MySQL"
-          subtitle="Alura"
-          icon={<FaDatabase />}
-          date="2022"
-          backgroundColor={linearGradient2022}
-        />
-        <CertificationCard
-          title="Fullstack Java + Angular"
-          subtitle="DIO"
-          icon={<FaJava />}
-          date="2023"
-          backgroundColor={linearGradient2023}
-        />
-        <CertificationCard
-          title="Python AI Backend Developer"
-          subtitle="DIO"
-          icon={<FaPython />}
-          date="2024"
-          backgroundColor={linearGradient2024}
-        />
-        <CertificationCard
-          title="Banco de Dados: Oracle PL/SQL"
-          subtitle="DIO"
-          icon={<FaDatabase />}
-          date="2024"
-          backgroundColor={linearGradient2024}
-        />
-        <CertificationCard
-          title="Front-End & Back-End"
-          subtitle="Santander Tech+"
-          icon={<MdScreenshotMonitor />}
-          date="2024 - 2025"
-          backgroundColor={linearGradient2024}
-        />
-        <CertificationCard
-          title="The Absolute Beginners Guide to Cyber Security"
-          subtitle="Udemy Business"
-          icon={<MdSecurity />}
-          date="2025"
-          backgroundColor={linearGradient2025}
-        />
-        <CertificationCard
-          title="Unit Testing for Typescript & Nodejs Developers with Jest"
-          subtitle="Udemy Business"
-          icon={<SiJest />}
-          date="2025"
-          backgroundColor={linearGradient2025}
-        />
-        <CertificationCard
-          title="React Native - The Practical Guide"
-          subtitle="Udemy Business"
-          icon={<TbBrandReactNative />}
-          date="2025"
-          backgroundColor={linearGradient2025}
-        />
-        <CertificationCard
-          title="NestJS - The Complete Developers Guide"
-          subtitle="Udemy Business"
-          icon={<SiNestjs />}
-          date="2025"
-          backgroundColor={linearGradient2025}
-        />
-        <CertificationCard
-          title="GitHub Actions - The Complete Guide"
-          subtitle="Udemy Business"
-          icon={<SiGithubactions />}
-          date="2025"
-          backgroundColor={linearGradient2025}
-        />
-        <CertificationCard
-          title="AWS Certified Cloud Practitioner"
-          subtitle="Amazon Web Services"
-          icon={<FaAws />}
-          date="2025"
-          backgroundColor={linearGradient2025}
-        />
-        <CertificationCard
-          title="Docker & Kubernetes: The Practical Guide"
-          subtitle="Udemy Business"
-          icon={<FaDocker />}
-          date="2025"
-          backgroundColor={linearGradient2025}
-        />
-      </VerticalTimeline>
+
+        <VerticalTimeline
+          lineColor="transparent"
+          layout="2-columns"
+          animate={true}
+          className="h-full"
+        >
+          {CERTIFICATIONS.map((cert) => {
+            const theme = getTheme(cert.date);
+            return (
+              <CertificationCard
+                key={cert.id}
+                title={cert.title}
+                subtitle={cert.subtitle}
+                icon={cert.icon}
+                date={cert.date}
+                cardBackground={theme.cardBg}
+                iconBg={theme.iconBg}
+                iconColor={theme.iconColor}
+                accent={theme.accent}
+              />
+            );
+          })}
+        </VerticalTimeline>
+      </div>
     </section>
   );
 }
