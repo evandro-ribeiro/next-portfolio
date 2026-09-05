@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 import InitialBanner from "@/components/initialBanner";
 import ProjectsSection from "@/components/projectSection/projectsSection";
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import PageWrapper from "@/components/pageWrapper";
 
 export const metadata: Metadata = {
   title: "Evandro Machado - Desenvolvedor Full Stack",
@@ -19,22 +19,23 @@ export const metadata: Metadata = {
     "Desenvolvimento Web",
     "Criação de sites",
     "Criação de landing page",
+    "Full Stack",
+    "React",
+    "Next.js",
   ],
 };
 
-const montserrat = Montserrat({
-  weight: ["300", "400", "500", "600", "700"],
-  subsets: ["latin"],
-});
-
 export default function Home() {
   return (
-    <main className={`${montserrat.className} bg-gray-900 text-gray-200`}>
+    <PageWrapper>
       <InitialBanner />
+      <div className="section-divider" />
       <ProjectsSection />
+      <div className="section-divider" />
       <CertificationSection />
+      <div className="section-divider" />
       <Contact />
       <Footer />
-    </main>
+    </PageWrapper>
   );
 }
