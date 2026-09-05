@@ -1,211 +1,247 @@
 "use client";
 
-import {
-  FaCss3Alt,
-  FaHtml5,
-  FaReact,
-  FaWordpress,
-  FaNode,
-  FaDocker,
-  FaAws,
-  FaGitAlt,
-  FaGithub,
-} from "react-icons/fa";
-import {
-  SiJavascript,
-  SiJest,
-  SiNestjs,
-  SiNextdotjs,
-  SiPostgresql,
-  SiTailwindcss,
-} from "react-icons/si";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import Navbar from "./navbar";
 import Stack from "./stacks";
-import { GrMysql } from "react-icons/gr";
-import { TbBrandTypescript } from "react-icons/tb";
-import Image from "next/image";
+import { useEffect, useState, useSyncExternalStore } from "react";
+import { FiArrowRight } from "react-icons/fi";
+import { STACKS } from "@/data/portfolioData";
+
+const emptySubscribe = () => () => {};
+function useIsMounted() {
+  return useSyncExternalStore(emptySubscribe, () => true, () => false);
+}
+
+// ─── Typing effect hook ──────────────────────────────
+function useTypingEffect(text: string, speed = 60) {
+  const [state, setState] = useState({ displayed: "", done: false });
+
+  useEffect(() => {
+    let i = -1;
+    const timer = setInterval(() => {
+      i++;
+      if (i < text.length) {
+        setState({ displayed: text.slice(0, i + 1), done: false });
+      } else {
+        setState({ displayed: text, done: true });
+        clearInterval(timer);
+      }
+    }, speed);
+    return () => clearInterval(timer);
+  }, [text, speed]);
+
+  return { displayed: state.displayed, done: state.done };
+}
+
+// ─── Floating Particle ───────────────────────────────
+function FloatingParticle({
+  size,
+  left,
+  delay,
+  duration,
+  color,
+}: {
+  size: number;
+  left: string;
+  delay: number;
+  duration: number;
+  color: string;
+}) {
+  return (
+    <motion.div
+      className="absolute rounded-full pointer-events-none"
+      style={{
+        width: size,
+        height: size,
+        left,
+        background: color,
+        filter: `blur(${size > 6 ? 2 : 1}px)`,
+        bottom: -20,
+      }}
+      animate={{
+        y: [0, -900],
+        opacity: [0, 0.8, 0.5, 0],
+        rotate: [0, 360],
+      }}
+      transition={{
+        duration,
+        delay,
+        repeat: Infinity,
+        ease: "linear",
+      }}
+    />
+  );
+}
+
+const particles = [
+  { size: 4, left: "8%", delay: 0, duration: 12, color: "rgba(76,0,255,0.6)" },
+  { size: 6, left: "15%", delay: 2, duration: 15, color: "rgba(255,131,0,0.5)" },
+  { size: 3, left: "25%", delay: 4, duration: 10, color: "rgba(245,221,97,0.6)" },
+  { size: 8, left: "35%", delay: 1, duration: 18, color: "rgba(76,0,255,0.4)" },
+  { size: 4, left: "45%", delay: 6, duration: 13, color: "rgba(255,131,0,0.4)" },
+  { size: 5, left: "55%", delay: 3, duration: 16, color: "rgba(76,0,255,0.5)" },
+  { size: 3, left: "65%", delay: 8, duration: 11, color: "rgba(245,221,97,0.5)" },
+  { size: 7, left: "75%", delay: 2, duration: 14, color: "rgba(255,131,0,0.6)" },
+  { size: 4, left: "85%", delay: 5, duration: 17, color: "rgba(76,0,255,0.5)" },
+  { size: 3, left: "92%", delay: 7, duration: 12, color: "rgba(245,221,97,0.4)" },
+];
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.06,
+    },
+  },
+};
+
+const stackItemVariants = {
+  hidden: { opacity: 0, scale: 0.7, y: 20 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: { type: "spring", stiffness: 200, damping: 15 },
+  },
+};
 
 export default function InitialBanner() {
-  const defaultAnimations = {
-    hidden: {
-      opacity: 0,
-      y: 20,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        repeat: Infinity,
-        duration: 10,
-      },
-    },
-  };
-
-  const title = "Desenvolvedor Full Stack";
+  const mounted = useIsMounted();
+  const { displayed, done } = useTypingEffect("Desenvolvedor Full Stack", 70);
+  const shouldReduceMotion = useReducedMotion();
 
   return (
-    <section className="relative overflow-hidden w-full h-fit">
-      <Image
-        src={"/bg-principal.webp"}
-        alt="Imagem de fundo da seção inicial com duas cores desfocadas"
-        fill
-        priority
-        className="w-full object-cover"
-      />
+    <section className="relative overflow-hidden w-full min-h-screen flex flex-col">
+      {/* ── Background layers ─────────────────────── */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#050810] via-[#0a0f1e] to-[#0a0f1e]" />
+      <div className="absolute inset-0 tech-grid-bg opacity-60 pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(76,0,255,0.18),transparent)] pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-64 bg-[radial-gradient(ellipse_80%_100%_at_50%_100%,rgba(255,131,0,0.12),transparent)] pointer-events-none" />
+
+      {/* Floating particles */}
+      {mounted && !shouldReduceMotion &&
+        particles.map((p, i) => <FloatingParticle key={i} {...p} />)
+      }
+
+      {/* Decorative line */}
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#4C00FF] to-transparent opacity-50" />
+
+      {/* Navbar */}
       <Navbar />
-      <div className="flex flex-col justify-center pt-10 pb-6 xs:py-12 xs:mb-1 mt-14 md:pb-6 backdrop-blur-sm">
+
+      {/* Main Hero Content */}
+      <div className="relative z-10 flex flex-col justify-center flex-1 pt-24 pb-10">
         <motion.div
-          className="flex flex-col text-center gap-2 md:gap-14 md:py-0 md:pt-16 justify-center items-center"
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            ease: "easeInOut",
-          }}
+          className="flex flex-col text-center gap-4 md:gap-8 justify-center items-center px-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
         >
-          <div className="md:w-1/2">
-            <motion.p
-              className="text-2xl md:text-5xl text-[#F0EDCF] pb-2"
-              initial="hidden"
-              animate="visible"
-              transition={{ staggerChildren: 0.1 }}
-            >
-              {title.split("").map((char, index) => (
-                <motion.span
-                  key={index}
-                  className="italic text-orange font-semibold"
-                  variants={defaultAnimations}
-                >
-                  {char}
-                </motion.span>
-              ))}
-            </motion.p>
-
-            <h1 className="text-3xl font-bold bg-text-dark-gradient text-transparent bg-clip-text pb-4 lg:text-5xl">
-              Evandro Machado
-            </h1>
-
-            <p className="text-gray-300 mx-6 md:mx-0 md:pt-4 pb-4 md:pb-0 text-xs md:text-base">
-              Desenvolvimento de aplicações web com responsividade, dinamismo e
-              interatividade. Sempre buscando as melhores práticas, evoluindo os
-              projetos em cada detalhe!
-            </p>
-          </div>
-
-          <Link
-            href={"https://wa.me/5544999561963"}
-            target="blank"
-            rel="noopener noreferrer"
-            className="border-2 border-gray-400 text-gray-200 rounded-full text-sm md:text-base p-2 md:p-3 md:w-52 hover:scale-110 hover:shadow-lg hover:shadow-blue-500 hover:bg-gray-200 hover:font-bold hover:text-sky-500 duration-300"
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[rgba(76,0,255,0.25)] border border-[#4C00FF] text-xs font-bold tracking-widest uppercase text-[#F5DD61] shadow-[0_0_15px_rgba(76,0,255,0.3)]"
           >
-            Entre em contato
-          </Link>
+            <span className="w-2 h-2 rounded-full bg-[#F5DD61] animate-pulse inline-block" />
+            Disponível para projetos
+          </motion.div>
+
+          {/* Typing Title & Main Name */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="md:w-3/4 lg:w-1/2"
+          >
+            <p className={`text-xl md:text-3xl font-extrabold text-[#F5DD61] drop-shadow-[0_0_10px_rgba(245,221,97,0.3)] mb-3 min-h-[2rem] ${done ? "typing-cursor" : ""}`}>
+              {displayed}
+            </p>
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-none">
+              <span className="text-white drop-shadow-[0_2px_10px_rgba(255,255,255,0.4)]">
+                Evandro
+              </span>{" "}
+              <span className="text-[#ff8300] drop-shadow-[0_0_20px_rgba(255,131,0,0.6)]">
+                Machado
+              </span>
+            </h1>
+          </motion.div>
+
+          {/* Description */}
+          <motion.p
+            className="text-gray-100 mx-6 md:mx-0 text-sm md:text-base max-w-xl leading-relaxed font-normal"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+          >
+            Desenvolvimento de aplicações web com responsividade, dinamismo e
+            interatividade. Sempre buscando as melhores práticas, evoluindo os
+            projetos em cada detalhe!
+          </motion.p>
+
+          {/* CTA Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.75, duration: 0.5 }}
+          >
+            <Link
+              href={"https://wa.me/5544999561963"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <motion.button
+                id="hero-cta-btn"
+                className="relative group overflow-hidden flex items-center gap-2 font-bold rounded-full px-8 py-3.5 text-white transition-all duration-300 shadow-[0_0_20px_rgba(255,131,0,0.4)]"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-[#4C00FF] via-[#0b397d] to-[#ff8300] transition-all duration-300 group-hover:opacity-90" />
+                <span className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-gradient-to-r from-transparent via-white/20 to-transparent transition-all duration-500 translate-x-[-100%] group-hover:translate-x-[100%]" />
+                <span className="relative z-10 text-white font-bold">Entre em contato</span>
+                <FiArrowRight className="relative z-10 text-white group-hover:translate-x-1 transition-transform duration-200" />
+              </motion.button>
+            </Link>
+          </motion.div>
         </motion.div>
 
-        <ul className="flex justify-center flex-wrap gap-6 my-12 lg:mt-20 md:gap-8 px-6 xl:max-w-[90%] xl:mx-auto">
-          <Stack
-            Icon={FaReact}
-            title="React.js"
-            colorItem="shadow-sky-300 text-sky-700 hover:text-sky-700 hover:shadow-sky-300"
-          />
+        {/* Tech Stack */}
+        <motion.div
+          className="mt-12 lg:mt-16 px-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.9, duration: 0.5 }}
+        >
+          <motion.p
+            className="text-center text-xs font-bold tracking-widest uppercase text-[#F5DD61] drop-shadow-[0_0_8px_rgba(245,221,97,0.3)] mb-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.0 }}
+          >
+            Tecnologias & Ferramentas
+          </motion.p>
 
-          <Stack
-            Icon={SiNextdotjs}
-            title="Next.js"
-            colorItem="shadow-gray-300 text-gray-600 hover:text-gray-500 hover:shadow-gray-500"
-          />
-
-          <Stack
-            Icon={TbBrandTypescript}
-            title="TypeScript"
-            colorItem="shadow-blue-300 text-blue-300 hover:text-blue-300 hover:shadow-blue-300"
-          />
-
-          <Stack
-            Icon={SiJavascript}
-            title="JavaScript"
-            colorItem="shadow-amber-300 text-amber-300 hover:text-amber-300 hover:shadow-amber-300"
-          />
-
-          <Stack
-            Icon={FaHtml5}
-            title="HTML"
-            colorItem="shadow-[#e2542e] text-[#e2542e] hover:text-[#e2542e] hover:shadow-[#e2542e]"
-          />
-
-          <Stack
-            Icon={FaCss3Alt}
-            title="CSS"
-            colorItem="shadow-blue-300 text-blue-600 hover:text-blue-600 hover:shadow-blue-300"
-          />
-
-          <Stack
-            Icon={SiTailwindcss}
-            title="Tailwind"
-            colorItem="shadow-sky-100 text-sky-300 hover:text-sky-300 hover:shadow-sky-500"
-          />
-
-          <Stack
-            Icon={FaNode}
-            title="Node.js"
-            colorItem="shadow-green-400 text-green-400 hover:text-green-400 hover:shadow-green-400"
-          />
-
-          <Stack
-            Icon={SiNestjs}
-            title="NestJS"
-            colorItem="shadow-red-400 text-red-400 hover:text-red-400 hover:shadow-red-400"
-          />
-
-          <Stack
-            Icon={FaDocker}
-            title="Docker"
-            colorItem="shadow-blue-100 text-blue-400 hover:text-blue-400 hover:shadow-blue-400"
-          />
-
-          <Stack
-            Icon={GrMysql}
-            title="MySQL"
-            colorItem="shadow-sky-300 text-sky-700 hover:text-sky-700 hover:shadow-sky-400"
-          />
-
-          <Stack
-            Icon={SiPostgresql}
-            title="PostgreSQL"
-            colorItem="shadow-cyan-200 text-cyan-300 hover:text-cyan-300 hover:shadow-cyan-500"
-          />
-
-          <Stack
-            Icon={FaWordpress}
-            title="WordPress"
-            colorItem="shadow-cyan-300 text-cyan-600 hover:text-cyan-600 hover:shadow-cyan-500"
-          />
-
-          <Stack
-            Icon={SiJest}
-            title="Jest"
-            colorItem="shadow-[#c8421c] text-[#c8421c] hover:text-[#c8421c] hover:shadow-[#c8421c]"
-          />
-
-          <Stack
-            Icon={FaAws}
-            title="AWS"
-            colorItem="shadow-[#ff9c08] text-[#ff9c08] hover:text-[#ff9c08] hover:shadow-[#ff9c08]"
-          />
-
-          <Stack
-            Icon={FaGitAlt}
-            title="Git"
-            colorItem="shadow-[#f05539] text-[#f05539] hover:text-[#f05539] hover:shadow-[#f05539]"
-          />
-
-          <Stack
-            Icon={FaGithub}
-            title="GitHub"
-            colorItem="shadow-neutral-700 text-neutral-500 hover:text-neutral-300 hover:shadow-neutral-500"
-          />
-        </ul>
+          <motion.ul
+            className="flex justify-center flex-wrap gap-3 md:gap-4 xl:max-w-5xl xl:mx-auto"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            {STACKS.map((stack) => (
+              <motion.li key={stack.title} variants={stackItemVariants}>
+                <Stack
+                  Icon={stack.Icon}
+                  title={stack.title}
+                  colorItem={stack.colorItem}
+                />
+              </motion.li>
+            ))}
+          </motion.ul>
+        </motion.div>
       </div>
     </section>
   );
