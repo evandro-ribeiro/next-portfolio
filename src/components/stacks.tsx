@@ -10,11 +10,21 @@ export default function Stack({
   colorItem: string;
 }) {
   return (
-    <li
-      className={`text-xs md:text-sm backdrop-blur-lg flex font-semibold gap-2 items-center p-2 md:p-4 rounded-full shadow-sm md:shadow-md md:shadow-white md:text-gray-100 duration-200 hover:scale-110 ${colorItem}`}
+    <div
+      className={`
+        tech-badge
+        text-xs md:text-sm
+        flex font-semibold gap-2 items-center
+        px-3 md:px-4 py-2 md:py-2.5
+        rounded-full
+        cursor-default
+        transition-all duration-300
+        hover:scale-110
+        ${colorItem}
+      `}
     >
-      <Icon className="md:size-7 size-5 p-0.5" />
+      <Icon className="md:size-5 size-4" />
       {title}
-    </li>
+    </div>
   );
 }
